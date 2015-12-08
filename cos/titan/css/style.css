@@ -1,0 +1,232 @@
+/* CSS Document
+Use for:    cos.99.com
+Version:    1.0
+Date:       2015-06-19 22:14:37
+Author:     Bingyu Yuan
+*/
+
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;-webkit-transform-style:preserve-3d; -webkit-backface-visibility:hidden;}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0; }
+header, footer, article, section, nav, menu, hgroup { display: block; clear: all; }
+html { font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif; -ms-text-size-adjust: auto; -webkit-text-size-adjust: auto;height: 100%; font-size: 10px;}
+body { margin: 0; color: #fff; background-color: #000; height: 100%; -webkit-overflow-scrolling: touch;  font-size: 1.4rem; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+a { background: transparent; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+a:active { outline: 0; }
+img { border: 0; vertical-align: middle; -ms-interpolation-mode: bicubic; }
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
+button[disabled], html input[disabled] { cursor: default; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+input::-moz-placeholder, textarea::-moz-placeholder { color: #cccccc; }
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cccccc; }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #cccccc; }
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+textarea { overflow: auto; resize: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+td, th { padding: 0; }
+ul, ol { list-style: none outside none; }
+/*---------- common ----------*/
+.fl { float: left; display: inline; }
+.fr { float: right; display: inline; }
+.clearfix:after { content: ""; height: 0; visibility: hidden; display: block; clear: both; }
+.clearfix { zoom: 1; }
+.clear { clear: both }
+.ab-center{position: absolute;top:50%;left:50%;width:100%;-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);-o-transform: translate(-50%,-50%);transform: translate(-50%,-50%);text-align: center; }
+.ab-center-x{position: absolute;top:0;left:50%;width:100%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);text-align: center; }
+.ab-center-y{position: absolute;top:50%;left:0;width:100%;-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);-ms-transform: translateY(-50%);-o-transform: translateY(-50%);transform: translateY(-50%);text-align: center; }
+
+.dn{display: none;}
+.txt-hide{text-indent: -99999px;white-space: nowrap;line-height: 0;}
+.txt-center{text-align: center;}
+
+
+/*---------- 竖屏提示 ----------*/
+.tip{display: none;position: fixed;z-index: 100; width: 100%;height: 100%;background: #000;text-align: center;vertical-align: middle;font-size: 2rem;font-weight: bold;color: #fff;}
+.tip p{width: 80%}
+
+/*---------- loading ----------*/
+.loading{position: fixed;top: 0;left: 0;z-index: 200; background-color: #ebf6f6;width: 100%;height: 100%;z-index: 200;}
+.loading-txt{position: relative; width:160px; color: #d20100;font-size: 2rem;margin: 10px 0 0 -1rem;}
+.loading-txt:after{position: absolute; content:"..."; overflow:hidden;margin: 0 5px; width: 30px;vertical-align:top; -webkit-animation:tip infinite 1s 0.3s; animation:tip infinite 1s 0.3s; text-align: left;}
+/*loading*/
+.spinner {margin:0 auto 20px; width: 50px; height: 60px; text-align: center; font-size: 10px; }
+.spinner > div {background-color: #d20100; height: 100%; width: 6px; display: inline-block; -webkit-animation: stretchdelay 1.2s infinite ease-in-out; animation: stretchdelay 1.2s infinite ease-in-out; }
+.spinner .rect2 {-webkit-animation-delay: -1.1s; animation-delay: -1.1s; }
+.spinner .rect3 {-webkit-animation-delay: -1.0s; animation-delay: -1.0s; }
+.spinner .rect4 {-webkit-animation-delay: -0.9s; animation-delay: -0.9s; }
+.spinner .rect5 {-webkit-animation-delay: -0.8s; animation-delay: -0.8s; }
+@-webkit-keyframes stretchdelay {
+	0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+	20% { -webkit-transform: scaleY(1.0) }
+}
+@keyframes stretchdelay {
+	0%, 40%, 100% {transform: scaleY(0.4);-webkit-transform: scaleY(0.4);}
+	20% { transform: scaleY(1.0);-webkit-transform: scaleY(1.0);}
+}
+/*---------- page ----------*/
+.swiper-container {margin: 0 auto; min-width: 320px;height: 100%;width: 100%;overflow: hidden;}
+.swiper-slide {width: 100%; height: 100%; position: relative; overflow: hidden;}
+.swiper-wrapper{position: relative; height: 100%;}
+/*---------- page 01 ----------*/
+.page-01{ background: url(http://7xnz8p.com1.z0.glb.clouddn.com/cos/titan/image/page-01.jpg) no-repeat top center;background-size: 100% 100%;height: 100%;}
+.arrow{position: absolute; top:auto;left: 50%;margin-left: -5%; bottom: 3%; background: url(http://7xnz8p.com1.z0.glb.clouddn.com/cos/titan/image/arrow.png) no-repeat center bottom; width: 10%;padding: 4% 0; height: 0;background-size: 60% 60%;-webkit-animation: upAndDown 0.6s ease   infinite alternate ;
+-o-animation: upAndDown 0.6s ease infinite alternate ;
+animation: upAndDown 0.6s ease infinite alternate ;}
+
+/*---------- page 02 ----------*/
+.rules-layer{position: absolute;z-index: 20; top: 0;left: 0;width: 100%;height: 100%; background: #000;padding: 6% 8%;color: #fff;font-size: 1.8rem;-webkit-animation-duration: 0.5s; -o-animation-duration: .5s; animation-duration: .5s;-webkit-animation-fill-mode: forwards; -o-animation-fill-mode: forwards; animation-fill-mode: forwards;}
+.r-tit{font-weight: bold;}
+.r-txt{margin-bottom: 4%;}
+.r-tip{font-weight: bold;margin: 12% 0;}
+.excite{font-size: 2rem;font-weight: bold;text-align: center;}
+.r-way{margin: 12% 0;}
+.play-btn-box{text-align: center;}
+.play-btn{display: inline-block; font-size: 1.6rem;color: #000; font-weight: bold;text-align: center;padding: 2% 5%;background: #fff000;border-radius: 20px;}
+
+@media screen and (max-device-height: 600px){
+  .rules-layer{font-size: 1.6rem;}
+  .r-txt{margin-bottom: 2%;}
+  .r-tip{margin: 8% 0;}
+  .r-way{margin: 10% 0;}
+}
+
+/*game main*/
+.game-main{padding: 5%; background: url(http://7xnz8p.com1.z0.glb.clouddn.com/cos/titan/image/page-02.jpg) no-repeat;background-size: 100% 100%;height: 100%;}
+.game{overflow: hidden; position: relative; background: #fff;width: 80%;margin: 0 auto;height: 70%;}
+.blood{top: 8%; width: 44.38%;padding: 7% 0; height: 0;  line-height:0;font-size: 0; }
+.blood-border{height: 100%;width: 100%;-webkit-border-image:url(http://7xnz8p.com1.z0.glb.clouddn.com/cos/titan/image/blood.png) 10;border-width:10px;}
+.blood-num{height: 80%;width: 80%;text-align: left;border-radius: 50%;overflow: hidden;background-clip: padding-box}
+.blood-num li{position: relative; display: inline-block;height: 100%;background: #ed2129;
+background: -moz-linear-gradient(top,  #ed2129 0%, #c5171e 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ed2129), color-stop(100%,#c5171e));
+background: -webkit-linear-gradient(top,  #ed2129 0%,#c5171e 100%);
+background: -o-linear-gradient(top,  #ed2129 0%,#c5171e 100%);
+background: -ms-linear-gradient(top,  #ed2129 0%,#c5171e 100%);
+background: linear-gradient(to bottom,  #ed2129 0%,#c5171e 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed2129', endColorstr='#c5171e',GradientType=0 );
+width: 10%;height: 100%;box-shadow: inset 0 0 5px #fff;}
+.blood-num li:after{position: absolute; content: "";width: 2px;height: 100%;background: #e23736;right: 0;top: 0;}
+
+
+.tower{position: absolute; z-index: 6; width: 100%;left: 50%;top: -1%;margin-left: -62%;}
+
+.time{ position: absolute; font-size: 3rem;color: red;right: 5%;top: 15%;font-weight: bold;}
+.hammer{position: absolute; left: 50%;top: 70%; background: url(http://7xnz8p.com1.z0.glb.clouddn.com/cos/titan/image/cz.png);width: 18%;padding: 9% 0; height: 0;background-size: 100% 100%;will-change:left;}
+.hammer-out{-webkit-animation: hammerOut 0.5s linear;
+-o-animation: hammerOut 0.5s linear;
+animation: hammerOut 0.5s linear;transform-origin:center;}
+
+.dec{position: absolute; top: 30%; left: 0; background: url(http://7xnz8p.com1.z0.glb.clouddn.com/cos/titan/image/dec.png) no-repeat center;background-size: 100% auto;width: 100%;padding: 50% 0;}
+@media screen and (max-device-height: 580px){
+	.dec{top: 25%;}
+}
+.press{position: absolute;left: 0; bottom: 0;width: 100%;padding: 5%;text-align: center;}
+.press-btn{display: inline-block;background: url(http://7xnz8p.com1.z0.glb.clouddn.com/cos/titan/image/q.png) no-repeat center;width: 46%;padding: 23% 0;height: 0;background-size: 105% 105%; }
+.press-btn-w{background-image: url(http://7xnz8p.com1.z0.glb.clouddn.com/cos/titan/image/w.png);}
+.pressed.press-btn-q{background-image: url(http://7xnz8p.com1.z0.glb.clouddn.com/cos/titan/image/q-n.png);}
+.pressed.press-btn-w{background-image: url(http://7xnz8p.com1.z0.glb.clouddn.com/cos/titan/image/w-n.png);}
+
+.lottery-pop{position: absolute; z-index: 50; top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.9);text-align: center; vertical-align: middle;}
+.lottery-btn{font-size: 3rem;color: #000;text-align: center; display: inline-block; width:50%;padding: 25% 0; background: #fcff00;border-radius: 50%;font-weight: bold;}
+
+.pop-layer{z-index: 50; background: rgba(0,0,0,.5);width: 100%;height: 100%;position: absolute;left: 0;top: 0;}
+.pop{padding: 5%;background: rgba(0,0,0,.9);width: 80%;}
+.no-gift-pop{color: #fff;font-weight: bold;font-size: 2.6rem;text-align: center;}
+.btn-box{margin: 15% 0 0; text-align: center;}
+.btn{display: inline-block;background: url(http://7xnz8p.com1.z0.glb.clouddn.com/cos/titan/image/btn.png) no-repeat center;background-size: 100% 100%;font-size: 2rem;line-height: 1; color: #000;padding:4% 5%;font-weight: bold; }
+
+.cdk-pop{padding: 8%; background: #000 url(http://7xnz8p.com1.z0.glb.clouddn.com/cos/titan/image/pop.jpg) no-repeat top center;background-size: 100%;font-size: 2rem;}
+.cdk-txt{padding: 10% 0; background: url(http://7xnz8p.com1.z0.glb.clouddn.com/cos/titan/image/sdk.jpg) no-repeat center; background-size: 100% 100%;text-align: center;font-weight: 3rem;color: #000;}
+/*---------- animate ---------*/
+/*fadeOut*/
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*fadeIn*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+/*upAndDown*/
+@-webkit-keyframes upAndDown {
+  0% {
+    -webkit-transform: translateY(3px);-moz-transform: translateY(3px);-ms-transform: translateY(3px);-o-transform: translateY(3px);transform: translateY(3px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-3px);-moz-transform: translateY(-3px);-ms-transform: translateY(-3px);-o-transform: translateY(-3px);transform: translateY(-3px);
+  }
+}
+@keyframes upAndDown {
+  0% {
+    -webkit-transform: translateY(3px);-moz-transform: translateY(3px);-ms-transform: translateY(3px);-o-transform: translateY(3px);transform: translateY(3px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-3px);-moz-transform: translateY(-3px);-ms-transform: translateY(-3px);-o-transform: translateY(-3px);transform: translateY(-3px);
+  }
+}
+.upAndDown{
+  -webkit-animation-name: upAndDown;
+  animation-name: upAndDown;
+}
+@-webkit-keyframes hammerOut {
+  0% {
+  }
+
+  100% {
+    -webkit-transform:rotate(500deg);transform:rotate(500deg);top: 28%;
+  }
+}
+@keyframes hammerOut {
+  0% {
+  }
+
+  100% {
+    -webkit-transform:rotate(500deg);transform:rotate(500deg);top: 28%;
+  }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>首页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui,maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- tip -->
+<div class="tip" id="originTip">
+	<p class="ab-center">为了更好的体验，请将手机/平板竖过来！</p>
+</div>
+<!-- /tip -->
+<!-- loading -->
+<div class="loading" id="load">
+	<div class="ab-center">
+		<div class="spinner">
+			<div class="rect1"></div>
+			<div class="rect2"></div>
+			<div class="rect3"></div>
+			<div class="rect4"></div>
+			<div class="rect5"></div>
+		</div>
+	     <p class="loading-txt ab-center-x">加载中</p>
+	</div>
+</div>
+<!-- /loading -->
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+		<!-- page 1 -->
+		<div class="swiper-slide page-01">
+			<a class="arrow" href="javascript:;" id="nextBtn"></a>
+		</div>
+		<!-- /page 1 -->
+		<!-- page 2 -->
+		<div class="swiper-slide page-02 swiper-no-swiping">
+			<div class="rules-layer" id="rules">
+				<p class="r-tit">Q技能</p>
+				<p class="r-txt">对敌单位造成物理伤害并减速，每次使用带来自身硬直时间</p>
+				<p class="r-tit">W技能</p>
+				<p class="r-txt">朝指定方向位移，Q后硬直中使用，更可取消硬直，减半CD时间</p>
+				<p class="r-tip">玩泰坦Q&W配合使用效果更佳哦～</p>
+				<p class="excite">~~课堂练习:拆塔游戏~~</p>
+				<p class="r-way">当锤子移至中轴时,点击Q键拆塔，若要再次点击Q键，需点击W键方可使Q键复位，成功拆塔后即有机会获得英雄卡。</p>
+				<div class="play-btn-box"><a href="javascript:;" id="playBtn" class="play-btn">新技能get<br/>进入拆塔小游戏</a></div>
+			</div>
+			<div class="game-main">
+				<div class="game" id="game">
+					<div class="blood ab-center">
+						<ul class="blood-num ab-center" id="blood">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<div class="ab-center blood-border"></div>
+					</div>
+	                    <img src="image/ta.png" class="tower" id="tower">
+	                    <div class="dec"></div>
+	                    <div class="hammer" id="hammer"></div>
+	                    <p class="time" id="time">20”</p>
+				</div>
+	                <div class="press">
+	                    <a href="javascript:;" class="press-btn press-btn-q" id="pressQ"></a>
+	                    <a href="javascript:;" class="press-btn press-btn-w" id="pressW"></a>
+	                </div>
+	                <a id="test" class="ab-center-x">init</a>
+	                <!-- 抽奖 pop -->
+	                <div class="lottery-pop dn" id="lotteryPop"><a href="javascript:;" class="lottery-btn ab-center"><span class="ab-center">点击抽奖</span></a></div>
+	                <!-- /抽奖 pop -->
+	                <!-- 没抽中噢 -->
+	                <div class="pop-layer dn">
+	                	<div class="pop no-gift-pop ab-center">
+	                		<p>没抽中噢~</p>
+	                		<div class="btn-box"><a href="javascript:;" class="btn">再来一次</a></div>
+	                	</div>
+	                </div>
+	                <!-- /没抽中噢 -->
+	                <!-- cdk pop-->
+                	<div class="pop-layer dn">
+                		<div class="pop cdk-pop ab-center">
+              				<p>亲，恭喜您，中奖啦！</p>
+              				<p>您的CD-KEY是：</p>
+              				<p class="cdk-txt">xxxxxxxxxxx</p>
+              				<p>该CD-key于xx日凌晨方可生效</p>
+              				<div class="btn-box"><a href="javascript:;" class="btn">我知道了</a></div>
+                		</div>
+                	</div>
+                	<!-- cdk -->
+			</div>
+		</div>
+		<!-- /page 2 -->
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/idangerous.swiper.min.js"></script>
+<script type="text/javascript" src="js/preloadImg.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</html>
