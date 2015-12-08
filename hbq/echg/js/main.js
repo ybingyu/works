@@ -2,7 +2,7 @@
  * Author: ybingyu
  * Version: 0.1.0
  * Compile Date: 2015-11-11 14:51
-*/ 
+*/
 // 横竖屏检测
 window.addEventListener('onorientationchange' in window ? 'orientationchange' : 'resize', orientationChange, false);
 function orientationChange() {
@@ -51,7 +51,7 @@ function $(id){
 	return document.getElementById(id);
 }
 
-IMGPATH = '../image/'; //预加载的图片路径前缀
+IMGPATH = 'http://7xnz8p.com1.z0.glb.clouddn.com/echg/image/'; //预加载的图片路径前缀
 PRELOADIMGS = [
 	'clock-h.png',
 	'clock-m.png',
@@ -168,7 +168,7 @@ echg.init = function(){
 				self.domLoadTxt.innerHTML = progress;
 				self.domLoadProgress.style.cssText = 'width:' + progress + '%';
 			});
-		
+
 		// 请在这里请求数据
 		self.userData = [
 			[2014,8,20,21],//第一次登录[年,月,日,时]
