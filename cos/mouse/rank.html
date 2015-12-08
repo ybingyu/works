@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>排行榜</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui,maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- loading -->
+    <div class="canvas_box" id="load">
+        <canvas id="canvas"></canvas>
+        <p class="load_txt ab_center"></p>
+    </div>
+    <!-- /loading -->
+    <div class="full_bg dn" id="fullMain">
+        <p class="rank_tit">top50排行榜</p>
+        <!-- 按钮 -->
+        <div class="rank_btn_box">            
+            <ul class="rank_btns">
+                <li class="rb_cell">
+                    <a href="index.html" title="主菜单" class="r_btn" id="homeBtn">
+                        <span class="rb_l"></span>
+                        <span class="rb_c">主菜单</span>
+                        <span class="rb_r"></span>
+                    </a>
+                </li>
+                <li class="rb_cell">
+                    <a href="invite.html" title="邀朋友助攻" class="r_btn">
+                        <span class="rb_l"></span>
+                        <span class="rb_c">邀朋友助攻</span>
+                        <span class="rb_r"></span>
+                    </a>
+                </li>
+                <li class="rb_cell">
+                    <a href="#" title="奖励" class="r_btn">
+                        <span class="rb_l"></span>
+                        <span class="rb_c">奖  励</span>
+                        <span class="rb_r"></span>
+                    </a>
+                </li>                
+            </ul>
+        </div>
+        <!-- /按钮 -->
+        <!-- 排行榜 -->
+        <div class="game_main">
+            <div class="gm_inner_box rk_table_box">
+                <!-- table -->
+                <table class="rank_table">
+                    <thead>
+                        <tr>
+                            <th>名次</th>
+                            <th>名字</th>
+                            <th class="rt_th_long">击杀<br />英雄</th>
+                            <th class="rt_th_long">击杀<br />小兵</th>
+                            <th>总分</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td class="rt_name">名字最长七个字</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td class="rt_score">1212</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td class="rt_name">名字最长七个字</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td class="rt_score">1212</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td class="rt_name">名字最长七个字</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td class="rt_score">1212</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td class="rt_name">名字最长七个字</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td class="rt_score">1212</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td class="rt_name">名字最长七个字</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td class="rt_score">1212</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td class="rt_name">名字最长七个字</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td class="rt_score">1212</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- /table -->
+                <!-- page -->
+                <div class="rt_page">
+                    <ul class="rtp_list">
+                        <li class="rt_page_ctrl rtp_prev"><a href="#" title="上一页"><span class="rtp_tria ab_center_y"></span>上一页</a></li>
+                        <li><a href="#"><span>1</span></a></li>
+                        <li><a href="#"><span>2</span></a></li>
+                        <li class="rtp_cur"><a><span>3</span></a></li>
+                        <li><a href="#"><span>4</span></a></li>
+                        <li><a href="#"><span>5</span></a></li>
+                        <li class="rt_page_ctrl rtp_next"><a href="#" title="下一页"><span class="rtp_tria ab_center_y"></span>下一页</a></li>
+                    </ul>
+                </div>
+                <!-- /page -->
+                <div class="game_cover"></div>
+            </div>
+        </div>
+        <!-- /排行榜 -->
+        <!-- footer -->
+        <div class="game_bg_b">
+            <div class="game_dec"></div>
+        </div>
+        <!-- /footer -->
+    </div>
+</body>
+<script src="js/common.js"></script>
+<script src="js/configure.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/images.js"></script>
+<script src="js/howler.min.js"></script>
+<script type="text/javascript">
+    //图片预加载
+    DomControl.ready(function(){
+        //audio预加载
+        var oImgCtrl = new ImagesControl(2,function(){
+            new AudioControl(2,function(){
+                AudioControl.play("bg");
+            });
+        });
+
+        //最好成绩 显示与否
+        var maxScore = parseInt(GetQueryString("max"));
+        var ohomeBtn = document.getElementById("homeBtn");
+        if(maxScore){//1有成绩 可点击
+            ohomeBtn.href = "index.html?max=1";
+        }else{
+            ohomeBtn.href = "index.html?max=0";
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>首页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui,maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- loading -->
+    <div class="canvas_box" id="load">
+        <canvas id="canvas"></canvas>
+        <p class="load_txt ab_center"></p>
+    </div>
+    <!-- /loading -->
+    <div class="full_bg index_bg dn" id="fullMain">
+        <div class="index_bg_b">
+            <div class="index_bg_t">
+                <div class="game_logo">打地鼠</div>
+                <a href="javascript:;" class="ab_center_x illus_btn" id="illusBtn" title="玩法说明">玩法说明</a>
+                <div class="index_main">
+                    <a href="javascript:;" class="index_btn start_btn" id="startBtn" title="开始游戏">开始游戏</a>
+                    <a href="rank.html" class="index_btn rank_btn" id="rankBtn" title="查看排行">查看排行</a>
+                    <a href="javascript:;" class="index_btn best_btn" id="bestBtn" title="最好成绩">最好成绩</a><!-- best_btn_dis 为灰色样式 不可点击  -->
+                </div>
+            </div>
+            <div class="index_dec"></div>
+            <!-- 遮罩层 -->
+            <div class="popup_cover dn" id="popupCover"></div>
+            <!-- /遮罩层 -->
+            <!-- 玩法说明 -->
+            <div class="ab_center_y illus_box dn" id="illusMain">
+                <p class="illus_tit ab_center_x">玩法说明</p>
+                <div class="illus_box_b"></div>
+                <div class="illus_box_t">   
+                    <!-- 玩法说明列表 -->
+                    <div class="illus_list_box">
+                        <ul class="illus_list">
+                            <li><i class="list_num">1</i>活动时间为1月16日-1月23日；</li>
+                            <li><i class="list_num">2</i>点击开始游戏即可开启，游戏分为4个关卡。每个关卡限时30秒，难度逐渐增强，每关击杀量达到60%则过关，否则结束本轮游戏；</li>
+                            <li><i class="list_num">3</i>击杀英雄获得5分，击杀小兵获得1分，并计算总分可冲刺排行榜，排行榜TOP50将获得公测纪念版礼盒78元档（活动结束后排行榜选手点击奖励可统计其邮递信息，逾期一周未提交邮递信息视为自动放弃）；</li>
+                            <li><i class="list_num">4</i>本游戏可多次尝试，仅记录每个玩家最好成绩，同时可分享至朋友圈让好友帮您助攻，每个好友助攻将在您最高成绩上获得1分限获得20分；</li>
+                            <li><i class="list_num">5</i>最终解释权归官方所有。</li>
+                        </ul>
+                    </div>
+                    <!-- /玩法说明列表 -->
+                    <a href="#" class="illus_ok_btn" title="我知道了">我知道了</a>
+                </div>
+            </div>
+            <!-- /玩法说明 -->
+            <!-- test -->
+            <div class="ab_center_y illus_box dn" id="illusMain">
+                <p class="illus_tit ab_center_x">玩法说明</p>
+                <div class="illus_box_b"></div>
+                <div class="illus_box_t">   
+                    <!-- 玩法说明列表 -->
+                    <div class="illus_list_box">
+                        <ul class="illus_list">
+                            <li><i class="list_num">1</i>活动时间为1月16日-1月23日；</li>
+                            <li><i class="list_num">2</i>点击开始游戏即可开启，游戏分为4个关卡。每个关卡限时30秒，难度逐渐增强，每关击杀量达到60%则过关，否则结束本轮游戏；</li>
+                            <li><i class="list_num">3</i>击杀英雄获得5分，击杀小兵获得1分，并计算总分可冲刺排行榜，排行榜TOP50将获得公测纪念版礼盒78元档（活动结束后排行榜选手点击奖励可统计其邮递信息，逾期一周未提交邮递信息视为自动放弃）；</li>
+                            <li><i class="list_num">4</i>本游戏可多次尝试，仅记录每个玩家最好成绩，同时可分享至朋友圈让好友帮您助攻，每个好友助攻将在您最高成绩上获得1分限获得20分；</li>
+                            <li><i class="list_num">5</i>最终解释权归官方所有。</li>
+                        </ul>
+                    </div>
+                    <!-- /玩法说明列表 -->
+                    <a href="#" class="illus_ok_btn" title="我知道了">我知道了</a>
+                </div>
+            </div>
+            <!-- /玩法说明 -->
+        </div>
+    </div>
+</body>
+<script src="js/common.js"></script>
+<script src="js/configure.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/images.js"></script>
+<script src="js/howler.min.js"></script>
+<script type="text/javascript">
+    windowOnload( function(){
+        //玩法说明
+        var oIllusBtn = document.getElementById("illusBtn");
+        oIllusBtn.onclick = function(){
+            DomControl.removeClass(document.getElementById("illusMain"),"dn") ;
+            DomControl.removeClass(document.getElementById("popupCover"),"dn") ;//遮罩层
+        }
+
+        var oIllusOk = document.querySelector("#illusMain .illus_ok_btn");
+        oIllusOk.onclick = function(){
+            DomControl.addClass(document.getElementById("illusMain"),"dn") ;
+            DomControl.addClass(document.getElementById("popupCover"),"dn") ;
+        }
+
+        var oStartBtn = document.getElementById("startBtn");
+        //当前关(读取？)
+        var lvl = 0;
+        oStartBtn.href = "game.html?lvl=" + lvl;
+
+        //最好成绩 显示与否
+        var maxScore = parseInt(GetQueryString("max"));
+        var oBestBtn = document.getElementById("bestBtn");
+        if(maxScore){//1有成绩 可点击
+            oBestBtn.className = "index_btn best_btn";
+            oBestBtn.href = "";
+        }else{
+            oBestBtn.className = "index_btn best_btn best_btn_dis";
+            oBestBtn.noHref = "nohref";
+        }
+
+        var oRankBtn = document.getElementById("rankBtn");
+        if(maxScore){//1有成绩 可点击
+            oRankBtn.href = "rank.html?max=1";
+        }else{
+            oRankBtn.href = "rank.html?max=0";
+        }
+    })
+    // 0128 audio
+    //图片预加载
+    DomControl.ready(function(){
+        //audio预加载
+        var oImgCtrl = new ImagesControl(0,function(){
+            new AudioControl(0,function(){
+                AudioControl.play("bg");
+            });
+        });
+    })
+</script>
+</html>

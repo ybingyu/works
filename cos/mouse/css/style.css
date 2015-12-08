@@ -1,0 +1,407 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Yuan Bingyu
+ * @date    2015-1-7
+ * @version 1
+ */
+
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-transform-style:preserve-3d; -webkit-backface-visibility:hidden; -webkit-transform:translate3d(0,0,0)}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0; }
+header, footer, article, section, nav, menu, hgroup { display: block; clear: all; }
+html { font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-size: 10px;height: 100%; }
+body { margin: 0; font-size: 1.4rem; line-height: 1.5; color: #fff; background-color: white; height: 100%; -webkit-overflow-scrolling: touch;  }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+a { background: transparent; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+a:active { outline: 0; }
+img { border: 0; vertical-align: middle; -ms-interpolation-mode: bicubic; }
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
+button[disabled], html input[disabled] { cursor: default; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+input::-moz-placeholder, textarea::-moz-placeholder { color: #cccccc; }
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cccccc; }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #cccccc; }
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+textarea { overflow: auto; resize: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+td, th { padding: 0; }
+ul, ol { list-style: none outside none; }
+/*---------- common ----------*/
+.fl { float: left; display: inline; }
+.fr { float: right; display: inline; }
+.clearfix:after { content: ""; height: 0; visibility: hidden; display: block; clear: both; }
+.clearfix { zoom: 1; }
+.clear { clear: both }
+.ab_center{position: absolute;top:50%;left:50%;width:100%;-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);-o-transform: translate(-50%,-50%);transform: translate(-50%-50%);text-align: center; }
+.ab_center_x{position: absolute;top:0;left:50%;width:100%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);text-align: center; }
+.ab_center_y{position: absolute;top:50%;left:0;width:100%;-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);-ms-transform: translateY(-50%);-o-transform: translateY(-50%);transform: translateY(-50%);text-align: center; }
+
+.dn{display: none;}
+
+.full_bg{margin: 0 auto; min-width: 320px;height: 100%; }
+/*进度条*/
+#load{z-index: 100; position: fixed;width: 100%;height: 100%;background: #563213;top:0;left: 0;font-size: 2rem;}
+/************************************
+*首页
+*************************************/
+/*---------- 首页主体 ----------*/
+/*bg*/
+.index_bg{margin: 0 auto; min-width: 320px;height: 100%; background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/bg_m.jpg") repeat-y 0 center ;background-size: 100% auto;}
+.index_bg_t{width:100%;height: 100%; background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/bg_t.jpg") no-repeat top center ;background-size: 100% auto;}
+.index_bg_b{width:100%;height: 100%; background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/bg_b.jpg") no-repeat bottom center ;background-size: 100% auto;}
+/*logo*/
+.logo{top: 20%; background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/logo.png") no-repeat center;background-size: 100% 100%;width:45.94%;height: 0;padding: 13.91% 0 ;line-height: 0;text-indent: -9999px; }
+.game_logo{position: absolute;top:30%; overflow: hidden;height: 0; width:100%;padding: 32.81% 0;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/game_logo.png") no-repeat center;background-size: 100% auto; text-indent: -9999px;line-height: 0;}
+/*玩法说明*/
+.illus_btn{display: block; margin: 0 auto; width:34.38%;padding:10.16% 0 ; overflow: hidden;height: 0; text-indent: -9999px;line-height: 0;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/illus_btn.png") no-repeat center;background-size: 100% auto; }
+.illus_btn:hover{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/illus_btn_h.png");}
+/*main btns*/
+.index_main{position: absolute;bottom: 0; width: 100%;padding: 0 0 5%; }
+.index_btn{display: block;margin: 1% auto; width:48.91%;padding: 9.56% 0; overflow: hidden;height: 0; text-indent: -9999px;line-height: 0;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/start_btn.png") no-repeat center;background-size: 100% auto; }
+.start_btn{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/start_btn.png");}
+.rank_btn{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/rank_btn.png");}
+.best_btn{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/best_btn.png");}
+.start_btn:active{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/start_btn_h.png");}
+.rank_btn:active{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/rank_btn_h.png");}
+.best_btn:active{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/best_btn_h.png");}
+.best_btn_dis{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/best_btn_dis.png");}
+.best_btn_dis:active{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/best_btn_dis.png");}
+/*右下角装饰*/
+.index_dec{pointer-events:none;position: absolute;bottom: 0;right: 0;width:34.38%; padding:23.75% 0;height: 0;background:url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/index_dec_br.png") no-repeat center;background-size: 100% auto;}
+/*---------- 玩法说明 面板 ----------*/
+#illusMain .illus_tit{top: 8%;}
+.popup_cover{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(255,255,255,0.6);}
+.illus_box{ z-index: 60; width: 100%; /*min-height: 70%; */background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/illus_bg_m.png") repeat-y center;background-size: 100% auto; position: fixed;}
+.illus_box_t{position: relative;z-index: 50; margin-top: -10%;min-height: 340px; padding: 35% 15% 5%;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/illus_bg_t.png") no-repeat top center;background-size: 100% auto;}
+.illus_box_b{position: absolute;z-index: 49; bottom: -10%; width: 100%;height: 100%;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/illus_bg_b.png") no-repeat bottom center;background-size: 100% auto;}
+.illus_tit{z-index: 52; height: 0;width: 57.19%;padding: 6.78% 0;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/illus_tit.png") no-repeat center;background-size: 100% 100%; line-height: 0; top: 18%;text-indent: -9999px;}
+/*玩法说明列表*/
+.illus_list_box{height: 280px;overflow: auto;}
+.illus_list{padding-bottom: 10px;font:700 1.4rem/2rem "Microsoft YaHei";color:#332312;/*text-shadow:0 0 2px #62512c;*/text-align: left;}
+.illus_list .list_num{font-style: normal; color: #8a5f26;}
+.illus_list .list_num:after{content: ".";display: inline;margin-right: 0.5em;}
+/*我知道了*/
+.illus_ok_btn{display: block;margin: 10px auto; width: 40.91%;padding: 9.16% 0; overflow: hidden;height: 0; text-indent: -9999px;line-height: 0;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/illus_ok_btn.png") no-repeat center;background-size: 100% auto;}
+.illus_ok_btn:active{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/illus_ok_btn_h.png");}
+
+/************************************
+*首页 - 邀请
+*************************************/
+/*---------- main ----------*/
+.invite_main{padding: 0 0 20%;}
+.friend_name{ font-size:2rem;font-weight: 700;text-align: center; color: #ff8d12; text-shadow: 0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a;  }
+.friend_grade{font-size:2.4rem;font-weight: 700;text-align: center;color:#ff8d12;text-shadow: 0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a;}
+.friend_btn{overflow: visible;position: relative; background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/friend_btn.png");}
+.friend_btn:active{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/friend_btn_h.png");}
+.help_tip{position: absolute;left: -36%; width: 50%;height: 0;padding: 12% 0;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/help.png") no-repeat center;background-size: 100% 100%;text-indent: -9999px;
+animation:help 0.8s;
+-moz-animation:help 0.8s; /* Firefox */
+-webkit-animation:help 0.8s; /* Safari and Chrome */
+-o-animation:help 0.8s; /* Opera */
+animation-iteration-count:999;
+-webkit-animation-iteration-count:999;/* Safari and Chrome */}
+
+@-webkit-keyframes help{
+0%   {left:-40%;}
+50%   {left:-36%;}
+100%   {left:-40%;}
+}
+.game_explain{position: absolute;z-index: 40;box-shadow: 0 -25px 20px #fff inset;  bottom: 0;padding-bottom: 6.5%; width: 100%;}
+.game_tit{ font-size: 2rem;font-weight: 700;text-align: center;color:#c82c14; text-shadow: 0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a;  }
+.beta_time{font-size: 2.6rem;font-weight: 700;text-align: center;color:#f6ce48;text-shadow: 0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a,0 0 1px #2d201a;}
+/************************************
+*游戏主页
+*************************************/
+/*---------- 关数 ----------*/
+.level{position: absolute;width: 100%; z-index: 10; top: 2%;padding: 7% 0;  background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/level_bg.png") no-repeat center;background-size: auto 100%; font-size: 3rem; text-align: center; color:#f6ce48;text-shadow:3px 4px 10px #4d0a15;}
+.level_ind{font-style: normal;margin-top: -0.5%; color:#33d5c4;font-weight: 700;line-height: 1; }
+/*---------- 时间 ----------*/
+.time{position: relative;width: 100%; padding: 20.31% 0;height: 0;  background:#211507;  ;background-size: 100% auto;}
+.time_proc_box{position: absolute;top: 46%;left: 28%; width: 68%; padding: 8.69% 0;}
+.time_proc{position: absolute;top: 0;left: 0; width: 70%;height: 100%; background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/time_proc.png") no-repeat 0 center;background-size: auto 100%;}
+.time_cover{position: absolute;top: 0;left: 0; width: 100%;height: 100%; background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/time_cover.png") no-repeat center; background-size: 100% auto;}
+.time_txt{position: absolute; right: 76%;bottom: 11.5%;text-align: center;width: auto; font-size: 3.6rem;font-weight: 700;color: #ffebcc;text-shadow: 1px 1px 5px #000;}
+@media screen and (min-width:360px){
+    .time_txt{ right: 77.5%; bottom: 13%;}
+}
+/*---------- game main ----------*/
+.game_main{ background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/game_bg_m.jpg") no-repeat center;background-size: 100% 100%;padding: 0 5%;}
+.gm_inner_box{position: relative;width: 100%;/* min-height: 400px; */padding: 0 0 30px;}
+.game_cover{pointer-events:none;position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/game_cover.png") no-repeat center;background-size: 100% 100%;}
+
+/*洞*/
+.hole_list,
+.sprite_list{width: 88.75%;margin: 0 auto;}
+.hole_list{position: relative;}
+.hole_list>li,
+.sprite_list>li{float: left;width: 33.3%; padding:22% 0;}
+.hole_list>li{background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/hole.png") no-repeat bottom center;background-size: 87% auto;/* border:1px solid blue; */}
+.hr_box{position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+.hr_box li:nth-child(1){top: 33.3%;}
+.hr_box li:nth-child(2){top: 66.6%;}
+.hr_box li:nth-child(3){top: 99.9%;}
+.hr_box li:nth-child(4){left: 33.3%;}
+.hr_box li:nth-child(5){left: 66.6%;}
+.hr_h{width: 90%;padding: 2.52% 0;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/hole_hr_v.png") no-repeat center; background-size: 100% auto;}
+.hr_v{width: 5%;height:90%;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/hole_hr_h.png") no-repeat center; background-size:auto 100% ;margin-left: -2.5%;}
+/*地鼠*/
+.sprite_list{position: absolute;top: 0;}
+.sprite_list>li{position: relative; /* border:1px solid red; */border-radius: 100px/60px;border-top-left-radius: 0;border-top-right-radius: 0;overflow: hidden;}
+.sprite{position: absolute; bottom: -2px;width: 100%;height: 65%;animation:mouse 3s;
+-moz-animation:mouse 3s; /* Firefox */
+-webkit-animation:mouse 3s; /* Safari and Chrome */
+-o-animation:mouse 3s; /* Opera */}
+@-webkit-keyframes mouse{
+0%   {bottom: -100px;}
+50%   {bottom: -5px;}
+100% {bottom: -100px;}
+}
+@keyframes mouse{
+0%   {bottom: -100px;}
+50%   {bottom: -5px;}
+100% {bottom: -100px;}
+}
+.hero_01{background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/sprite/hero_01.png") no-repeat bottom center;background-size: 100% auto;}
+.hero_02{background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/sprite/hero_02.png") no-repeat bottom center;background-size: 100% auto;}
+.hero_03{background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/sprite/hero_03.png") no-repeat bottom center;background-size: 100% auto;}
+.hero_04{background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/sprite/hero_04.png") no-repeat bottom center;background-size: 100% auto;}
+.hero_05{background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/sprite/hero_05.png") no-repeat bottom center;background-size: 100% auto;}
+.hero_06{background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/sprite/hero_06.png") no-repeat bottom center;background-size: 100% auto;}
+.hero_07{background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/sprite/hero_07.png") no-repeat bottom center;background-size: 100% auto;}
+.hero_08{background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/sprite/hero_08.png") no-repeat bottom center;background-size: 100% auto;}
+.hero_09{background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/sprite/hero_09.png") no-repeat bottom center;background-size: 100% auto;}
+.soldier_01{background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/sprite/solider_01.png") no-repeat bottom center;background-size: 100% auto;}
+.soldier_02{background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/sprite/solider_02.png") no-repeat bottom center;background-size: 100% auto;}
+.soldier_03{background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/sprite/solider_03.png") no-repeat bottom center;background-size: 100% auto;}
+.soldier_04{background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/sprite/solider_04.png") no-repeat bottom center;background-size: 100% auto;}
+.soldier_05{background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/sprite/solider_05.png") no-repeat bottom center;background-size: 100% auto;}
+@media screen and (max-height:500px){
+    .gm_inner_box{padding: 0 0 25px;}
+    .hole_list>li, .sprite_list>li{padding: 20% 0;}
+}
+@media screen and (min-height:500px){
+    .gm_inner_box{ padding: 10px 0 35px;}
+    .sprite_list{top: 10px;}
+}
+@media screen and (min-height:550px){
+    .gm_inner_box{ padding: 15px 0 40px;}
+    .sprite_list{top: 15px;}
+}
+@media screen and (min-height:650px){
+    .gm_inner_box{ padding: 20px 0 45px;}
+    .sprite_list{top: 20px;}
+}
+/*hit*/
+.hited{background:url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/hited_01.png") no-repeat bottom center;background-size: 100% auto;animation:hit 3s;
+-moz-animation:hit 3s; /* Firefox */
+-webkit-animation:hit 3s; /* Safari and Chrome */
+-o-animation:hit 3s; /* Opera */}
+@-webkit-keyframes hit{
+0%   {background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/hited_01.png");}
+25%  {background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/hited_02.png");}
+50% {background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/hited_03.png");}
+75% {background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/hited_04.png");}
+100% {background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/hited_05.png");}
+}
+@keyframes hit{
+0%   {background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/hited_01.png");}
+25%  {background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/hited_02.png");}
+50% {background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/hited_03.png");}
+75% {background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/hited_04.png");}
+100% {background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/hited_05.png");}
+}
+/*连杀*/
+.double_hit{position: absolute;top:-3rem;z-index: 55;font-size: 3rem;font-weight: 700;color:#ee4145;text-shadow:1px 1px 3px #52220e,1px 1px 3px #52220e,1px 1px 3px #52220e; }
+.dh_num{color: #ffbd3d;}
+/*---------- 通关小结等 ----------*/
+/*tit*/
+.pass_level .illus_tit{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/lvlpass_tit.png");}
+.all_level .illus_tit{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/lvlall_tit.png");}
+.fail_level .illus_tit{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/lvlfail_tit.png");}
+/*结果*/
+.level_result{min-height: 150px;text-align: left; font-size: 2.2rem;color: #cdcdcd;font-weight:700;text-shadow:0 0 1px #52220e,0 0 1px #52220e,0 0 1px #52220e;line-height: 3.6rem;}
+.levelr_num{color: #e65528;font-size: 2.8rem;font-style: normal;margin: 0 1px;}
+.unit{font-style: normal; font-size: 2.2rem;}
+/*btns*/
+.level_btns{display: table;width: 100%;text-align: center;margin: 20px auto;/* margin: 0 auto; */}
+.level_btns li{display: table-cell;}
+.pass_level .level_btns{width:30% }
+.all_level .level_btns{margin-top: 10%;}
+.level_btn a{position: relative;display: inline-block;width: 60%;padding: 30% 0;height: 0;line-height: 0;text-indent: -9999px; background: url("") no-repeat center;background-size: 100% 100%;}
+.lb_next a{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/next.png");}
+.lb_home a{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/home.png");}
+.lb_again a{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/again.png");}
+.lb_share a{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/share.png");}
+.lb_rank a{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/rank.png");}
+.lb_next a:active{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/next_h.png");}
+.lb_home a:active{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/home_h.png");}
+.lb_again a:active{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/again_h.png");}
+.lb_share a:active{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/share_h.png");}
+.lb_rank a:active{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/rank_h.png");}
+
+.lb_share a,
+.lb_next a{animation:next 0.3s;
+-moz-animation:next 0.3s; /* Firefox */
+-webkit-animation:next 0.3s; /* Safari and Chrome */
+-o-animation:next 0.3s; /* Opera */
+animation-direction:alternate;
+-webkit-animation-direction:alternate; /* Safari 和 Chrome */
+animation-iteration-count:999;
+-webkit-animation-iteration-count:999; /* Safari 和 Chrome */
+-o-animation-timing-function: ease-out;
+-webkit-animation-timing-function: ease-out;
+animation-timing-function: ease-out;
+animation-delay:5s;
+-webkit-animation-delay:5s; /* Safari 和 Chrome */
+}
+@-webkit-keyframes next{
+0%   {top: -5px;}
+100% {top: 0px;}
+}
+/*章*/
+.badge{ position: absolute;z-index: 60; right: 3%;top: 48%;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/badge.png") no-repeat center;width: 34.88%;padding: 23.44%;height: 0;line-height: 1;background-size: 100% 100%;
+animation:badgeA 1s;
+-moz-animation:badgeA 1s; /* Firefox */
+-webkit-animation:badgeA 1s; /* Safari and Chrome */
+-o-animation:badgeA 1s; /* Opera */
+animation-timing-function: linear;
+-webkit-animation-timing-function: linear;
+-o-animation-timing-function: linear;
+-moz-animation-timing-function: linear;
+}
+.badge_txt_box{position: absolute;width: 100%;top: 30%;left: 0;  transform: rotate(-14deg); -ms-transform: rotate(-14deg); /* IE 9 */  -webkit-transform: rotate(-14deg);/* Safari 和 Chrome */  /* Safari 和 Chrome */ -moz-transform: rotate(-14deg);/* Firefox */ -o-transform: rotate(-14deg);/* Opera */ }
+.badge_txt{font-size: 1.2rem;color: #ff9f00;text-shadow:0 0 1px #52220e,0 0 1px #52220e,0 0 1px #52220e;}
+.badge_txt_num{font-size: 2.2rem;font-weight: 700;}
+.badge_rank{z-index: 61; animation:badgeARank 2.5s;
+-moz-animation:badgeARank 2.5s; /* Firefox */
+-webkit-animation:badgeARank 2.5s; /* Safari and Chrome */
+-o-animation:badgeARank 2.5s; /* Opera */}
+.badge_rank .badge_txt_num{font-size: 2.8rem;font-weight: 700;line-height: 3rem;}
+@-webkit-keyframes badgeA{
+0%   {opacity: 0 }
+98%   {opacity: 0;transform: scale(3,3);
+-ms-transform: scale(3,3);  /* IE 9 */
+-webkit-transform: scale(3,3);  /* Safari 和 Chrome */
+-o-transform: scale(3,3);   /* Opera */
+-moz-transform: scale(3,3); /* Firefox */ }
+100% {opacity: 1;  }
+}
+@-webkit-keyframes badgeARank{
+0%   {opacity: 0 }
+98%   {opacity: 0;transform: scale(3,3);
+-ms-transform: scale(3,3);  /* IE 9 */
+-webkit-transform: scale(3,3);  /* Safari 和 Chrome */
+-o-transform: scale(3,3);   /* Opera */
+-moz-transform: scale(3,3); /* Firefox */ }
+100%   {opacity: 1;}
+}
+
+/*分享面板*/
+.share_box{z-index: 70; position: fixed;top: 0;right: 0;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/dialog.png") no-repeat;background-size: 100% 100%;width: 80%;height: 40%;}
+.share_txt{position: absolute;bottom: 20%;left: 0;width: 100%; color: #52220e;font-size: 2rem;text-align: center;}
+/*---------- footer ----------*/
+.game_bg_b{position: relative; background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/game_bg_b.jpg") no-repeat center; background-size: 100% 100%;width: 100%;height: 0;padding:5.47% 0; }
+.game_dec{pointer-events:none; position: absolute;bottom: 43%;right: 0;width: 53.44%;height: 0;padding: 8.59% 0;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/game_dec_br.png") no-repeat bottom center;background-size: 100% 100%;}
+/*---------- 全屏覆盖层 ----------*/
+#lvlPass{position: fixed;top: 0;left: 0;width: 100%;height: 100%;}
+.cover_layer{top: 0;left: 0;z-index: 20; position: fixed;width: 100%;height: 100%;background: rgba(0,0,0,0.8);}
+.cl_level{width: 78.13%;height: 0;padding: 14.84% 0;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/game_level.png") no-repeat center;background-size: 100% auto;}
+.cll_txt{color: #33d5c4;font-size: 10rem;font-weight: 700;text-shadow:3px 3px 5px #52220e,3px 3px 5px #52220e,3px 3px 10px #52220e;margin-top: -3%;}
+.cl_ready{width: 92.59%;height: 0;padding: 12.04% 0;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/ready.png") no-repeat center;background-size: 100% auto;}
+.cl_go{width: 54.63%;height: 0;padding: 12.04% 0;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/go.png") no-repeat center;background-size: 100% auto;}
+.cl_pass,
+.cl_fail{ width: 85.19%;height: 0;padding: 19.91% 0;}
+.cl_pass_light{position: absolute;top: 0;left: 0;height: 100%;width: 100%;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/light.png") no-repeat center; background-size: 100% 100%;
+animation: light 1s ;
+-moz-animation: light 1s ; /* Firefox */
+-webkit-animation: light 1s ; /* Safari and Chrome */
+-o-animation: light 1s ; /* Opera */
+animation-iteration-count:999;
+-webkit-animation-iteration-count:999;/* Safari and Chrome */
+animation-direction:alternate;
+-webkit-animation-direction:alternate; /* Safari 和 Chrome */}
+.cl_pass_color{position: absolute;z-index: 45;top: 0;left: 0;height: 99999px;width: 100%;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/colour.png") repeat; background-size: 100% auto;animation: colour 1s ;
+-moz-animation: colour 9999s ; /* Firefox */
+-webkit-animation: colour 9999s ; /* Safari and Chrome */
+-o-animation: colour 9999s ; /* Opera */
+animation-iteration-count:999;
+-webkit-animation-iteration-count:999;/* Safari and Chrome */
+animation-direction:alternate;
+-webkit-animation-direction:alternate; /* Safari 和 Chrome */}
+.cl_pass{ z-index: 50;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/pass.png") no-repeat center;background-size: 100% auto;padding: 29.63% 0;}
+@-webkit-keyframes light{
+    0%{transform: rotate(3deg); -ms-transform: rotate(3deg); -webkit-transform: rotate(3deg); -o-transform: rotate(3deg); -moz-transform: rotate(3deg);}
+    100%{transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+}
+@-webkit-keyframes colour{
+    0%{background-position: 0 0}
+    100%{background-position: 0 5000%;}
+}
+.cl_fail{background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/fail.png") no-repeat center;background-size: 100% auto;/* z-index: 100; */}
+/************************************
+*排行榜
+*************************************/
+.rank_tit{background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/rank_tit.jpg") no-repeat top center; background-size: 100% 100%;width: 100%;padding: 14.84% 0;height: 0;text-indent: -9999px;}
+/*---------- 按钮 ----------*/
+.rank_btn_box{padding: 5px 0;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/rank_btns.jpg") no-repeat center;background-size: 100% 100%;}
+.rank_btns{display: table;width: 80%;margin: 0 auto;}
+.rb_cell{display: table-cell;vertical-align: center;text-align: center;}
+.r_btn{position: relative;display: inline-block;padding: 0 10px;}
+.r_btn .rb_r,
+.r_btn .rb_l{position: absolute; height: 100%;width: 10px;}
+.r_btn .rb_l{top: 0;left:0;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/rank_btn_l.png") no-repeat center;background-size: 100% 100%;}
+.r_btn .rb_r{top: 0;right:0;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/rank_btn_r.png") no-repeat center;background-size: 100% 100%;}
+.r_btn .rb_c{display: inline-block;height: 3.4rem; background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/rank_btn_c.png") repeat-x center;background-size: 100% 100%; color: #ffb24e;font-size: 1.8rem;font-weight: 700;line-height: 3.4rem;white-space: pre;text-shadow:0 0 2px #62512c;}
+.r_btn:active .rb_r{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/rank_btn_rh.png");}
+.r_btn:active .rb_l{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/rank_btn_lh.png");}
+.r_btn:active .rb_c{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/rank_btn_ch.png");}
+
+/*---------- 排行榜 ----------*/
+.rk_table_box{padding: 15px 10px;min-height:460px;}
+.rank_table{ width: 100%;text-align: center;}
+.rank_table th{background: rgba(214,144,83,0.5); font-size:2.4rem;color: #98522e;font-weight: 700;line-height: 1.2;padding: 5px 0;}
+.rank_table .rt_th_long{font-size: 1.6rem;}
+.rank_table tbody tr:nth-child(even){background: rgba(255,255,255,0.2);}
+.rank_table td{color: #98522e;font:700 1.2rem/3rem "Microsoft Simsun" }
+.rt_name,
+.rt_score{color:#563213; }
+
+/*page*/
+.rtp_list{margin: 10px auto 0; display: table;width: 96%;text-align: center;height: 3rem;vertical-align: top;line-height: 2rem;}
+.rtp_list li{display: table-cell;height: 100%;}
+.rtp_list a{ display: inline-block;width: 2rem;  height: 2rem;  color: #98522e;font-size: 1.6rem;font-weight: 700;}
+.rt_page_ctrl a{position: relative;white-space: nowrap;width: auto;}
+.rtp_prev a{padding: 0 0 0 1.5rem;}
+.rtp_next a{padding: 0 1.5rem 0 0;}
+.rtp_tria{display: inline-block; width: 0; height: 0; border-top: 0.6rem solid transparent;  border-bottom: 0.6rem solid transparent;}
+.rtp_prev .rtp_tria{border-right: 1.2rem solid #98522e;}
+.rtp_next .rtp_tria{left: auto;right: 0; border-left: 1.2rem solid #98522e;}
+.rtp_cur a:after{content: "";z-index: 5;left: 0; position: absolute;width: 100%;height: 100%;border-radius: 100%;background: #98522e; }
+.rtp_cur a{position: relative;color: #e0a362}
+.rtp_cur a span{position: relative; z-index: 10;}
+
+/************************************
+*邮寄
+*************************************/
+.mail_box{width: 100%;height: 100%;position: fixed;top: 0;left: 0; background: #fff;}
+.mail_tit{margin: 12% auto 0; width: 90%; font-size: 2.2rem; color: #474747;text-align: center;}
+/*表单*/
+.mail_info{margin: 8% auto;width: 90%; font-size: 2rem;}
+.mail_info li{width: 100%;margin: 0 0 5%;position: relative;vertical-align: middle;}
+.mi_lbl{float: left;width: 25%;  font-weight: 700; color: #474747;}
+.mi_textarea,
+.mi_input{float: left;width:75%;border:none;border-radius: 0; border-bottom: 1px solid #676767;line-height: 2.6rem;font-size: 2rem;color: #676767; outline: none;}
+.mi_input{ height: 3rem;}
+.mi_textarea{font:2rem/3rem "Microsoft YaHei";}
+.mi_hr{width: 75%;position: absolute;bottom: 50%;right: 0; height: 1px;background: #676767;border: none;}
+/*表单确认按钮*/
+.mail_btns{ margin: 0 auto; width: 90%;display: table;text-align: center; }
+.mbs_btn_box{display: table-cell;padding: 10px 5px;}
+.mail_btn{display: block;position: relative; background:#69c2ec;border-radius: 3px;color: #fff;font: 2rem/5rem "Microsoft YaHei"; }
+.mb_txt:after{ position: absolute;top: 50%;margin: -6px 0 0 5px; width: 0;height: 0;content: "";border-top:6px solid transparent;border-left: 6px solid #fff;border-bottom: 6px solid transparent; line-height: 0;}
+.mail_btn:active{background: #3a9bc9;}
+/*关闭按钮*/
+.mail_close{position: absolute;top: 1%;right: 10px; padding: 6% 0;height: 0;width: 10.31%;background: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/close_btn.png") no-repeat center;background-size: 100% auto;text-indent: -9999px;line-height: 0;outline: none;}
+.mail_close:active{background-image: url("http://7xnz8p.com1.z0.glb.clouddn.com/cos/mouse/image/close_btn_h.png");}
