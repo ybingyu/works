@@ -1,7 +1,7 @@
 /*
  * Author: ybingyu
  * Version: 0.1.0
- * Compile Date: 2015-10-27 17:11
+ * Compile Date: 2015-11-11 14:51
 */ 
 function zoom(width) {
 	var ratio; //缩放比例

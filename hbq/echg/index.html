@@ -23,8 +23,8 @@
 <script type="text/javascript" charset="utf-8" src="js/zoom.js"></script>
 <div style="display:none;">
     	<audio loop="loop" id="audio">
-        	<source src="http://7xnz8p.com1.z0.glb.clouddn.com/echg/audio/bg.mp3" type="audio/mpeg">
-        	<source src="http://7xnz8p.com1.z0.glb.clouddn.com/echg/audio/bg.ogg" type="audio/ogg">
+        	<source src="audio/bg.mp3" type="audio/mpeg">
+        	<source src="audio/bg.ogg" type="audio/ogg">
     	</audio>
 </div>
 <!-- tip -->
@@ -62,6 +62,7 @@
 				<div class="clock-m"></div>
 				<div class="data bd-time ani" swiper-animate-effect="big-data" swiper-animate-duration="0.5s">
 					<div class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+						<p class="username" id="numberYear"></p>
 						<p class="bd-number bd-date" id="numberDate"></p>
 						<p class="bd-txt"></p>
 					</div>
@@ -181,7 +182,7 @@
 			<p class="data sm-data sd-zs ani" swiper-animate-effect="lightSpeedIn-sw" swiper-animate-duration="0.5s" swiper-animate-delay="2.3s">
 				占总斩杀人头的<span class="sd-number" id="smZs" swiper-animate-delay="1.5s"></span>
 			</p>
-			<div class="verse">
+			<div class="verse verse-reverse">
 				<p class="ani" swiper-animate-effect="fadeIn" swiper-animate-delay="1.2s"></p>
 				<p class="ani" swiper-animate-effect="fadeIn" swiper-animate-delay="0.2s"></p>
 			</div>
@@ -195,7 +196,133 @@
 		</section>
 		<!-- /page 7 -->
 		<!-- page 8 -->
-		<div class="swiper-slide page-8">
+		<section class="swiper-slide page-8">
+			<div class="data big-data bd-st ani" swiper-animate-effect="big-data" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">
+				<div class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+				</div>
+			</div>
+			<div class="verse verse-reverse">
+				<p class="ani" swiper-animate-effect="fadeIn" swiper-animate-delay="1.2s"></p>
+				<p class="ani" swiper-animate-effect="fadeIn" swiper-animate-delay="0.2s"></p>
+			</div>
+			<div class="man-st ab-center">
+				<p class="data sm-data sd-st sd-st-tb ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.3s" swiper-animate-delay="2.6s">
+					头部<span class="sd-number" id="smStTb" swiper-animate-delay="2.4s"></span>次
+				</p>
+				<p class="data sm-data sd-st sd-st-st ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.3s" swiper-animate-delay="3.2s">
+					身体<span class="sd-number" id="smStSt" swiper-animate-delay="3s"></span>次
+				</p>
+				<p class="data sm-data sd-st sd-st-dp ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.3s" swiper-animate-delay="3.8s">
+					盾牌<span class="sd-number" id="smStDp" swiper-animate-delay="3.6s"></span>次
+				</p>
+				<div class="arrow-st arrow-st-tb ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.3s" swiper-animate-delay="2.3s"></div>
+				<div class="arrow-st arrow-st-st ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.3s" swiper-animate-delay="2.9s"></div>
+				<div class="arrow-dp ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.3s" swiper-animate-delay="3.5s"></div>
+			</div>
+			<div class="sun"></div>
+		</section>
+		<!-- /page 8 -->
+		<!-- page 9 -->
+		<section class="swiper-slide page-9">
+			<div class="data big-data bd-wq ani" swiper-animate-effect="big-data" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">
+				<div class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+					<p class="bd-txt">你最常使用的武器为</p>
+					<p class="bd-number" id="wq"></p>
+				</div>
+			</div>
+			<div class="verse verse-reverse">
+				<p class="ani" swiper-animate-effect="fadeIn" swiper-animate-delay="1.2s"></p>
+				<p class="ani" swiper-animate-effect="fadeIn" swiper-animate-delay="0.2s"></p>
+			</div>
+			<div class="man-wq ab-center">
+				<div class="arrow-wq"></div>
+			</div>
+		</section>
+		<!-- /page 9 -->
+		<!-- page 10 -->
+		<section class="swiper-slide page-10">
+			<div class="data big-data bd-sb ani" swiper-animate-effect="big-data" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">
+				<div class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+					<p class="bd-txt">击杀士兵数</p>
+					<p class="bd-number" id="sb" swiper-animate-delay="1.5s"></p>
+				</div>
+			</div>
+			<p class="data sm-data sd-sb ani" swiper-animate-effect="lightSpeedIn-sw" swiper-animate-duration="0.5s" swiper-animate-delay="2.3s">
+				在二测中排名<br>前<span class="sd-number" id="smSb" swiper-animate-delay="1.5s"></span>
+			</p>
+			<div class="man-sb">
+				<div class="man"></div>
+			</div>
+		</section>
+		<!-- /page 10 -->
+		<!-- page 11 -->
+		<section class="swiper-slide page-11">
+			<div class="data big-data bd-yjs ani" swiper-animate-effect="big-data" swiper-animate-duration="0.5s" swiper-animate-delay="2s">
+				<div class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1.8s">
+					<p class="bd-txt">累计一击杀次数</p>
+					<p class="bd-number" id="yjs" swiper-animate-delay="2.3s"></p>
+				</div>
+			</div>
+			<p class="data sm-data sd-yjs ani" swiper-animate-effect="lightSpeedIn-sw" swiper-animate-duration="0.5s" swiper-animate-delay="3s">
+				占总一击杀<br>次数的<span class="sd-number" id="smYjs" swiper-animate-delay="3s"></span>
+			</p>
+			<div class="verse verse-reverse">
+				<p class="ani" swiper-animate-effect="fadeIn" swiper-animate-delay="1.2s"></p>
+				<p class="ani" swiper-animate-effect="fadeIn" swiper-animate-delay="0.2s"></p>
+			</div>
+			<div class="man-yjs ani" swiper-animate-effect="man-yjs-ani"></div>
+			<div class="man-sw ani" swiper-animate-effect="man-sw-ani">
+				<div class="man-sw-t"></div>
+				<div class="man-sw-b"></div>
+				<div class="man-sw-hurt"></div>
+			</div>
+		</section>
+		<!-- /page 11 -->
+		<!-- page 12 -->
+		<section class="swiper-slide page-12">
+			<div class="data big-data bd-sh bd-df-sh ani" swiper-animate-effect="big-data" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+				<div class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.7s">
+					<p class="bd-txt">受到敌方的最高伤害为</p>
+					<p class="bd-number" id="dfSh" swiper-animate-delay="0.9s"></p>
+				</div>
+			</div>
+			<div class="data big-data bd-sh bd-sh-sd ani" swiper-animate-effect="big-data" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">
+				<div class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1.8s">
+					<p class="bd-txt"><b>单场</b>造成敌方的最高伤害为</p>
+					<p class="bd-number" id="sh" swiper-animate-delay="2s"></p>
+				</div>
+			</div>
+			<div class="verse verse-reverse">
+				<p class="ani" swiper-animate-effect="fadeIn" swiper-animate-delay="1.2s"></p>
+				<p class="ani" swiper-animate-effect="fadeIn" swiper-animate-delay="0.2s"></p>
+			</div>
+			<div class="man">
+				<div class="man-hurt"></div>
+				<div class="man-hurted"></div>
+			</div>
+		</section>
+		<!-- /page 12 -->
+		<!-- page 13 -->
+		<section class="swiper-slide page-13">
+			<div class="data big-data bd-fj ani" swiper-animate-effect="big-data" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">
+				<div class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+					<p class="bd-txt">最爱使用的副将为</p>
+					<p class="bd-number" id="fj" swiper-animate-delay="1.5s"></p>
+				</div>
+			</div>
+			<p class="data sm-data sd-bz ani" swiper-animate-effect="lightSpeedIn-sw" swiper-animate-duration="0.5s" swiper-animate-delay="2.3s">
+				最爱的兵种是<br><span class="sd-number" id="smbz" swiper-animate-delay="1.5s"></span>
+			</p>
+			<div class="verse verse-reverse">
+				<p class="ani" swiper-animate-effect="fadeIn" swiper-animate-delay="1.2s"></p>
+				<p class="ani" swiper-animate-effect="fadeIn" swiper-animate-delay="0.2s"></p>
+			</div>
+			<div class="man-sj ani" swiper-animate-effect="man-sj-ani" swiper-animate-delay="0.8s"></div>
+			<div class="man-lb"></div>
+		</section>
+		<!-- /page 13 -->
+		<!-- page end -->
+		<div class="swiper-slide page-end">
 			<div class="verse">
 				<p class="ani" swiper-animate-effect="fadeIn" swiper-animate-delay="6s"></p>
 				<p class="ani" swiper-animate-effect="fadeIn" swiper-animate-delay="5s"></p>
@@ -222,7 +349,7 @@
 				<a href="javascript:;" class="share-btn" id="shareBtn"></a>
 			</div>
 		</div>
-		<!-- /page 8 -->
+		<!-- /page end -->
 	</div>
 	<a href="javascript:;" class="arrow ab-center-x" id="arrow"></a>
 	<a href="javascript:;" class="music" id="musicBtn"></a>
@@ -235,8 +362,8 @@
 	<div class="pop-main ab-center">
 		<a href="javascript:;" class="pop-close"></a>
 		<p class="pop-tip">温馨提示：</p>
-		<p class="pop-tip-cont">您未关注“虎豹骑官方公众号”，长按二维码添加关注。</p>
-		<img src="http://7xnz8p.com1.z0.glb.clouddn.com/echg/ewm.png" height="340" width="340">
+		<p class="pop-tip-cont">1、长按图片识别下方二维码添加关注“虎豹骑”官方微信公众号；</p><p class="pop-tip-cont">2、点击导航菜单栏的“二测内容”选择“个人数据”即可查看自己在二测期间的详细数据；</p><p class="pop-tip-cont">3、您也可解绑当前账号后，绑定其他账号查看其他游戏角色数据。</p>
+		<img src="image/ewm.png" height="340" width="340">
 	</div>
 </div>
 <!-- /pop -->
@@ -244,5 +371,22 @@
 <script src="http://hbq.99.com/script/plugin/swiper/swiper.animate1.0.2.min.js "></script>
 <script type="text/javascript" charset="utf-8" src="js/preloadImg.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+<script type="text/javascript" src="http://wx.99.com/wxshare.html?sys=10"></script>
+<script>
+var type='<?#$type?>';
+sharedata={
+	imgUrl:"http://img9.91huo.cn/hbq/img/2015/10/23/echg.jpg", //分享的图片
+	title:'《虎豹骑》二测回顾', //分享到朋友圈的标题
+	url:"http://wx.99.com/hbq/echg", //分享的链接
+	desc:'《虎豹骑》二测回顾', //发送给好友的描述
+	success:function(){
+		//alert('分享成功');
+	},
+	cancel:function(){
+		//alert('取消了分享');
+	},
+};
+weixin.initShare(sharedata);
+</script>
 </body>
 </html>

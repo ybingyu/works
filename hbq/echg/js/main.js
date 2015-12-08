@@ -1,7 +1,7 @@
 /*
  * Author: ybingyu
  * Version: 0.1.0
- * Compile Date: 2015-10-27 17:11
+ * Compile Date: 2015-11-11 14:51
 */ 
 // 横竖屏检测
 window.addEventListener('onorientationchange' in window ? 'orientationchange' : 'resize', orientationChange, false);
@@ -51,7 +51,7 @@ function $(id){
 	return document.getElementById(id);
 }
 
-IMGPATH = 'http://7xnz8p.com1.z0.glb.clouddn.com/echg/'; //预加载的图片路径前缀
+IMGPATH = '../image/'; //预加载的图片路径前缀
 PRELOADIMGS = [
 	'clock-h.png',
 	'clock-m.png',
@@ -113,7 +113,31 @@ PRELOADIMGS = [
 	'zs-horse.png',
 	'zs-man.png'
 ];
-
+PRELOADIMGS_2 = [
+	'man-lb.png',
+	'man-sj.png',
+	'verse-13.png',
+	'page-fjbz.png',
+	'man-hurt.png',
+	'verse-11.png',
+	'verse-12.png',
+	'verse-10.png',
+	'verse-9.png',
+	'page-sh.png',
+	'man-yjs.png',
+	'page-yjs.png',
+	'man-sb.png',
+	'page-sb.png',
+	'arrow-wq.png',
+	'man-wq.png',
+	'page-wq.png',
+	'arrow-st.png',
+	'man-st.png',
+	'st-shield.png',
+	'sun.png',
+	'blood-st.png',
+	'st.png'
+];
 var echg = {};
 echg.init = function(){
 	var self = this;
@@ -128,6 +152,8 @@ echg.init = function(){
 				self.domLoadTxt = null;
 				self.domLoadProgress = null;
 				self.domLoad = null;
+
+				new ImagesControl(PRELOADIMGS_2);
 			},
 			function(){
 				if(arguments.length < 2 ){
@@ -151,7 +177,13 @@ echg.init = function(){
 			[860,75],//[杀敌数,占整个二测人头数xx%]
 			[624,18298],//[死亡次数,死亡排名]
 			[624],//[被救援次数]
-			[132,99.1]//[斩杀敌将,占斩杀人头的xx%]
+			[132,99.1],//[斩杀敌将,占斩杀人头的xx%]
+			[21,33,42],// [头部,身体,盾牌]
+			['倚天剑'],//最常用武器
+			[8262,43],//[击杀士兵数,在二测中排名]
+			[8262,72],//[累计一击杀次数,占总一击杀]
+			[888,237],//[受到敌方的最高伤害为,单场造成敌方的最高伤害为]
+			['吕不韦','特种兵'],//[最爱使用的副将为,最爱的兵种是]
 		];
 	});
 };
@@ -168,6 +200,7 @@ echg.initdomDataHtml = function(){
 
 	// page 1: 第一次登录
 	// this.domDataHtml($('numberYear'),this.userData[0][0],'年');
+	$('numberYear').innerHTML = '名字名字';
 	this.domDataHtml($('numberDate'),[this.userData[0][1],this.userData[0][2],this.userData[0][3]],['月','日','时',]);
 	// page 2:综合战斗力
 	this.domDataHtml($('zhzdl'),this.userData[1][0]);
@@ -185,6 +218,24 @@ echg.initdomDataHtml = function(){
 	// page 7:斩杀敌将
 	this.domDataHtml($('zs'),this.userData[6][0],'名');
 	this.domDataHtml($('smZs'),this.userData[6][1],'%');
+	// page 8:击中身体各部位的次数
+	this.domDataHtml($('smStTb'),this.userData[7][0],'');
+	this.domDataHtml($('smStSt'),this.userData[7][1],'');
+	this.domDataHtml($('smStDp'),this.userData[7][2],'');
+	// page 9:武器
+	$('wq').innerHTML = this.userData[8][0];
+	// page 10:击杀士兵数
+	this.domDataHtml($('sb'),this.userData[9][0],'名');
+	this.domDataHtml($('smSb'),this.userData[9][1],'%');
+	// page 11:累计一击杀次数
+	this.domDataHtml($('yjs'),this.userData[10][0],'次');
+	this.domDataHtml($('smYjs'),this.userData[10][1],'%');
+	// page 12:受到敌方的最高伤害为
+	this.domDataHtml($('dfSh'),this.userData[11][0],'点');
+	this.domDataHtml($('sh'),this.userData[11][1],'点');
+	// page 13:副将兵种
+	$('fj').innerHTML = this.userData[12][0];
+	$('smbz').innerHTML = this.userData[12][1];
 };
 
 echg.domDataHtml = function(o,num,unit){
@@ -240,7 +291,7 @@ echg.initPage = function(){
 		mousewheelControl : true,
 		longSwipesRatio:0.1,
 		onTransitionEnd : function(swiper){
-			if(swiper.activeIndex == 8){
+			if(swiper.activeIndex == swiper.slides.length-1){
 				hide(self.domArrow);
 			}else{
 				show(self.domArrow);
@@ -286,6 +337,7 @@ echg.initPage = function(){
 	document.querySelector('#pop .pop-close').addEventListener('touchend',function(){
 		hide($('pop'));
 	});
+	// self.swiper.slideTo(10);
 };
 
 
