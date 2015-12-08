@@ -1,0 +1,514 @@
+/*
+ * Author: ybingyu
+ * Version: 0.1.0
+ * Compile Date: 2015-08-14 15:19
+*/
+html {
+  color: #000;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+html * {
+  outline: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+html, body {
+  font-family: sans-serif; }
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0; }
+
+input, select, textarea {
+  font-size: 100%; }
+
+/* 去掉各 Table  cell 的边距并让其边重合 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* 去除默认边框 */
+fieldset, img {
+  border: 0; }
+
+/* 去掉 firefox 下此元素的边框 */
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+/* 一致的 del 样式 */
+del {
+  text-decoration: line-through; }
+
+address, caption, cite, code, dfn, em, th, var {
+  font-style: normal;
+  font-weight: 500; }
+
+/* 去掉列表前的标识, li 会继承 */
+ol, ul {
+  list-style: none; }
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption, th {
+  text-align: left; }
+
+/* 来自 yahoo, 让标题都自定义, 适应多个系统应用 */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: 500; }
+
+q:before, q:after {
+  content: ''; }
+
+/* 统一上标和下标 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* 正常链接 未访问 */
+/* 默认不显示下划线，保持页面简洁 */
+ins, a {
+  text-decoration: none; }
+
+/* rem 基准值 psd:640px */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  zoom: 1; }
+
+html, body {
+  height: 100%;
+  overflow: hidden; }
+
+body {
+  background: #131111 url(http://7xnz8p.com1.z0.glb.clouddn.com/hbq/test/image/bg-repeat.jpg) repeat-y top center;
+  background-size: 100% auto;
+  color: #b39c61;
+  font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif; }
+
+/*---------- common ----------*/
+.fl {
+  float: left;
+  display: inline; }
+
+.fr {
+  float: right;
+  display: inline; }
+
+.clearfix:after {
+  content: "";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+.clear {
+  clear: both; }
+
+.ab-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.ab-center-x {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  text-align: center; }
+
+.ab-center-y {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center; }
+
+.dn {
+  display: none; }
+
+.text-hide {
+  text-indent: -99999px;
+  white-space: nowrap;
+  line-height: 0; }
+
+.text-center {
+  text-align: center; }
+
+/*---------- 竖屏提示 ----------*/
+.tip {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: #131111;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0.41667rem;
+  font-weight: bold;
+  color: #fff; }
+  .tip p {
+    width: 80%; }
+
+/*---------- main ----------*/
+.main {
+  height: 100%;
+  overflow: hidden;
+  background: url(http://7xnz8p.com1.z0.glb.clouddn.com/hbq/test/image/bg.jpg) no-repeat top center;
+  background-size: 100% auto; }
+
+.logo {
+  top: 1%;
+  width: 4.26389rem; }
+  .logo a, .logo img {
+    display: block;
+    width: 100%; }
+
+.slogan {
+  margin: 0 auto;
+  width: 100%;
+  height: 6.66667rem;
+  background: url(http://7xnz8p.com1.z0.glb.clouddn.com/hbq/test/image/slogan.png) no-repeat top center;
+  background-size: auto 100%; }
+
+.main-page {
+  padding: 30% 0 0;
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  height: 100%;
+  width: 100%; }
+
+.page-01 {
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s; }
+
+.page-02 {
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s; }
+
+@media (max-device-height: 450px) {
+  .logo {
+    top: 0; }
+
+  .slogan {
+    height: 5.55556rem; }
+ }
+
+/*---------- fire ----------*/
+.fire {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%; }
+
+.fire-01, .fire-02 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat; }
+
+.fire-01 {
+  background-image: url(http://7xnz8p.com1.z0.glb.clouddn.com/hbq/test/image/fire-01.png);
+  -webkit-animation: fire 1s linear infinite alternate;
+  animation: fire 1s linear infinite alternate; }
+
+.fire-02 {
+  background-image: url(http://7xnz8p.com1.z0.glb.clouddn.com/hbq/test/image/fire-02.png);
+  -webkit-animation: fire 0.8s linear infinite alternate;
+  animation: fire 0.8s linear infinite alternate; }
+
+/*---------- page 01 begin ----------*/
+.test-txt {
+  background: rgba(16, 14, 14, 0.8);
+  width: 90%;
+  padding: 0.11111rem;
+  margin: 0 auto;
+  font-size: 0.5rem;
+  line-height: 0.77778rem;
+  text-align: left; }
+
+.begin .test-txt {
+  text-align: center; }
+
+.btn {
+  display: block;
+  box-shadow: 1px 1px 0.27778rem #171717; }
+
+.begin-btn {
+  margin: 10% auto;
+  background: url(http://7xnz8p.com1.z0.glb.clouddn.com/hbq/test/image/begin-btn.png) no-repeat center;
+  background-size: 100% 100%;
+  width: 7.94444rem;
+  height: 1.98611rem; }
+
+@media (max-device-height: 450px) {
+  .main-page {
+    padding: 25% 0 0; }
+ }
+
+@media (max-device-height: 500px) {
+  .main-page {
+    padding: 28% 0 0; }
+ }
+
+/*finger*/
+.finger-box {
+  position: relative;
+  border: 2px solid #d1a662;
+  border-radius: 0.20833rem;
+  margin: 4% auto 0;
+  background: url(http://7xnz8p.com1.z0.glb.clouddn.com/hbq/test/image/finger.png) no-repeat center;
+  width: 3.52778rem;
+  height: 3.58333rem;
+  background-size: 100% 100%;
+  overflow: hidden;
+  -webkit-touch-callout: none; }
+
+.finger-sweep {
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 0.69444rem;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(176, 137, 75, 0.8) 0%, rgba(255, 255, 255, 0) 90%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(176, 137, 75, 0.8)), color-stop(90%, rgba(255, 255, 255, 0)));
+  background: -webkit-linear-gradient(top, rgba(176, 137, 75, 0.8) 0%, rgba(255, 255, 255, 0) 90%);
+  background: -o-linear-gradient(top, rgba(176, 137, 75, 0.8) 0%, rgba(255, 255, 255, 0) 90%);
+  background: -ms-linear-gradient(top, rgba(176, 137, 75, 0.8) 0%, rgba(255, 255, 255, 0) 90%);
+  background: linear-gradient(to bottom, rgba(176, 137, 75, 0.8) 0%, rgba(255, 255, 255, 0) 90%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0894b', endColorstr='#00ffffff',GradientType=0 );
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.finger-animation .finger-sweep {
+  display: block;
+  -webkit-animation: finger 1s linear infinite alternate;
+  animation: finger 1s linear infinite alternate; }
+
+@media (max-device-height: 500px) {
+  .finger .test-txt {
+    padding: 0.04167rem;
+    font-size: 0.41667rem;
+    line-height: 0.63889rem; }
+
+  .finger-box {
+    margin: 2% auto 0;
+    width: 2.77778rem;
+    height: 2.77778rem; }
+ }
+
+/*---------- page 02 result ----------*/
+.result-img {
+  margin: 0 auto 2%;
+  background: url(http://7xnz8p.com1.z0.glb.clouddn.com/hbq/test/image/result-bg.png) no-repeat center;
+  width: 5.54167rem;
+  height: 5.77778rem;
+  background-size: 100% 100%;
+  overflow: hidden;
+  padding: 0.06944rem; }
+
+.result-img img {
+  width: 100%;
+  height: 100%; }
+
+.result-name {
+  text-align: center;
+  color: #b39c61;
+  font-size: 0.55556rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b39c61), to(#886127));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+.rn-l, .rn-r {
+  width: 0.93056rem;
+  margin: 0 0.13889rem;
+  height: 0.25rem;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat; }
+
+.rn-l {
+  background-image: url(http://7xnz8p.com1.z0.glb.clouddn.com/hbq/test/image/name-l.png); }
+
+.rn-r {
+  background-image: url(http://7xnz8p.com1.z0.glb.clouddn.com/hbq/test/image/name-r.png); }
+
+.result-txt {
+  padding: 0.06944rem 0.20833rem; }
+
+.result-txt p {
+  text-indent: 2em; }
+
+.btn-box {
+  text-align: center; }
+
+.btn-box a {
+  display: inline-block;
+  width: 3.98611rem;
+  height: 1.15278rem;
+  margin: 3% 0.13889rem; }
+
+.again-btn {
+  background: url(http://7xnz8p.com1.z0.glb.clouddn.com/hbq/test/image/again-btn.png);
+  background-size: 100% 100%; }
+
+.info-btn {
+  background: url(http://7xnz8p.com1.z0.glb.clouddn.com/hbq/test/image/info-btn.png);
+  background-size: 100% 100%; }
+
+@media (max-device-height: 500px) {
+  .result-img {
+    width: 6.80556rem;
+    height: 5.55556rem; }
+
+  .result-txt {
+    font-size: 0.41667rem;
+    line-height: 0.65278rem; }
+ }
+
+/*---------- animation ----------*/
+@keyframes fire {
+
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes fire {
+
+  100% {
+    opacity: 0; } }
+
+@keyframes finger {
+
+  100% {
+    top: 100%; } }
+
+@-webkit-keyframes finger {
+
+  100% {
+    top: 100%; } }
+
+@-webkit-keyframes zoomOutUp {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+@-webkit-keyframes slideOutUp {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+
+  100% {
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); } }
+
+@keyframes slideOutUp {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+
+  100% {
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); } }
+
+.slideOutUp {
+  -webkit-animation-name: slideOutUp;
+  animation-name: slideOutUp; }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn; }
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp; }
