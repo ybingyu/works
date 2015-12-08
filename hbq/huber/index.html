@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection"content="telephone=no, email=no" />
+    <title>huber</title>
+    <script type="text/javascript" charset="utf-8" src="js/flexible.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- tip -->
+<div class="tip" id="originTip">
+	<p class="ab-center">为了更好的体验，请将手机/平板竖过来！</p>
+</div>
+<!-- /tip -->
+<!-- loading -->
+<div class="loading" id="loading">
+	<p class="txt-hide">HUBER虎豹骑</p>
+ 	<p class="txt-hide">您的专属战马</p>
+</div>
+<!-- loading -->
+<!-- main -->
+<div class="main">
+	<div class="header">
+		 <p class="txt-hide">huber</p>
+	</div>
+	<div class="pages" id="pages">
+		<!-- page 01 选择战马 -->
+		<div class="page page-01">
+			<div class="search">
+				<div class="search-inner">
+	                    <p class="start-point">上车地点</p>
+	                    <p>上海新国际博览中心</p>
+                	</div>
+            	</div>
+               	<div id="huberMap" class="h-map">
+               	</div>
+              	<div class="h-select">
+                  	<ul class="h-select-list ab-center clearfix" id="hSelect">
+                        	<li class="on" hkind="xym">
+                           	<p>西域马</p><div class="hs-head"><img class="ab-center" src="http://7xnz8p.com1.z0.glb.clouddn.com/hbq/huber/image/hs-01.png"></div>
+                        	</li>
+                        	<li hkind="hxm">
+                            	<p>华夏马</p><div class="hs-head"><img class="ab-center" src="http://7xnz8p.com1.z0.glb.clouddn.com/hbq/huber/image/hs-01.png"></div>
+                        	</li>
+                        	<li hkind="hqm">
+                            	<p>河曲马</p><div class="hs-head"><img class="ab-center" src="http://7xnz8p.com1.z0.glb.clouddn.com/hbq/huber/image/hs-01.png"></div>
+                        	</li>
+                  	</ul>
+              	</div>
+              	<div class="h-detail ab-center dn pop" id="horseDetail">
+              		<a href="javascript:;" class="close-btn"></a>
+              		<p class="match dn" id="match">战马匹配度识别中……</p>
+              		<ul class="features" id="features">
+              			<li>
+              				<p class="features-name">耐力 </p>
+              				<p class="features-num">加载中</p>
+              			</li>
+              			<li>
+              				<p class="features-name">奔跑速度 </p>
+              				<p class="features-num">加载中</p>
+              			</li>
+              			<li>
+              				<p class="features-name">操纵度 </p>
+              				<p class="features-num">加载中</p>
+              			</li>
+              			<li>
+              				<p class="features-name">加速度 </p>
+              				<p class="features-num">加载中</p>
+              			</li>
+              			<li>
+              				<p class="features-name">马匹重量 </p>
+              				<p class="features-num">加载中</p>
+              			</li>
+              		</ul>
+              		<div class="hd-3d">
+              			<a href="javascript:;" class="hd-show hd-show-1" id="hdShow"></a>
+              			<a href="javascript:;" class="horse-3d-left txt-hide" id="hd3DLeft">向左转</a>
+                        	<a href="javascript:;" class="horse-3d-right txt-hide" id="hd3DRight">向右转</a>
+              		</div>
+              		<div class="hd-info" id="hdInfo">
+              			<div class="hd-head" id="hHead">
+              				<img src="">
+              			</div>
+              			<div class="hd-txt">
+              				<p class="hd-name">大宛马<span class="hd-lvl">LV</span></p>
+              				<p class="hd-des">大宛马“其先天马子也”，它在高速疾跑后流出像鲜血一样的汗水，因此得名“汗血宝马”。</p>
+              			</div>
+              		</div>
+              	</div>
+       	</div>
+		<!-- /page 01 选择战马 -->
+		<!-- page 02 填信息 -->
+		<div class="page page-02">
+			<div class="h-form">
+				<form>
+					<ul class="h-form-list">
+						<li>
+							<label>请输入您的目的地</label>
+							<input type="text">
+							<!-- 提示 -->
+							<p class="from-tip">&nbsp;</p>
+						</li>
+						<li>
+							<label>请输入您的姓名</label>
+							<input type="text">
+							<!-- 提示 -->
+							<p class="from-tip">&nbsp;</p>
+						</li>
+						<li>
+							<label>请输入您的手机号码</label>
+							<input type="text">
+							<!-- 提示 -->
+							<p class="from-tip">&nbsp;</p>
+						</li>
+					</ul>
+					<a href="javascript:;" class="hf-ok-btn" id="hfOkBtn">确认</a>
+				</form>
+			</div>
+			<div class="h-selected-horse">
+				<p class="logo"><img src="http://7xnz8p.com1.z0.glb.clouddn.com/hbq/huber/image/logo.png" class="ab-center"></p>
+				<div class="hd-info h-info-selected" id="selectedHorse">
+					<div class="hd-head">
+              				<img src="http://7xnz8p.com1.z0.glb.clouddn.com/hbq/huber/image/selected-h-01.png" height="112" width="104">
+              			</div>
+              			<div class="hd-txt">
+              				<p class="hd-name">大宛马<span class="hd-star">★</span><span class="hd-lvl">LV9</span></p>
+              				<p class="hd-des">大宛马“其先天马子也”，它在高速疾跑后流出像鲜血一样的汗水，因此得名“汗血宝马”。</p>
+              			</div>
+				</div>
+			</div>
+		</div>
+		<!-- /page 02 填信息 -->
+		<!-- page 03 结果 -->
+		<div class="page page-03">
+			<!-- 预约 -->
+			<div class="h-result" id="hResult">
+				<p>恭喜您获得HUBER马匹体验资格</p>
+				<p>马夫将在3：00与您联系</p>
+				<p>您需要前往上海新国际博览中心N5号馆虎豹骑展台</p>
+				<p>领取乘马凭证与精美礼品一份</p>
+			</div>
+			<!-- /预约 -->
+			<div class="btns-box">
+				<a href="javascript:;" class="result-btn" id="shareBtn">分享给好友</a>
+				<ul class="share-list">
+					<li class="sl-weibo"><a href="javascript:;" onclick="javascript:jiathis_sendto('tsina');return false;" target="_blank"></a></li>
+					<li class="sl-qzone"><a href="javascript:;" target="_blank" onclick="javascript:jiathis_sendto('qzone');return false;"></a></li>
+					<li class="sl-tieba"><a href="javascript:;" onclick="javascript:jiathis_sendto('tieba');return false;" target="_blank"></a></li>
+				</ul>
+				<a href="javascript:;" class="result-btn">分享让好友尝试</a>
+			</div>
+			<div class="zg">
+				<!-- <div class="community" id="community">
+					<p class="community-tit">官<br>媒</p>
+					<ul class="community-list">
+						<li class="cl-wechat"><a href="javascript:;"></a></li>
+						<li class="cl-weibo"><a href="http://weibo.com/u/3881287565" target="_blank"></a></li>
+						<li class="cl-forum"><a target="_blank" href="http://bbs.99.com/hbq"></a></li>
+						<li class="cl-tieba"><a rel="nofollow"  target="_blank"></a></li>
+					</ul>
+				</div> -->
+				<a href="javascript:;" class="zgxq-btn" id="zgxqBtn">点击展开虎豹骑展馆位置>>></a>
+				<div class="zgxq ab-center dn" id="zgxq">
+					<img src="http://7xnz8p.com1.z0.glb.clouddn.com/hbq/huber/image/zgxq.jpg">
+				</div>
+				<p class="share dn txt-hide" id="share">点击右上角分享朋友圈</p>
+			</div>
+			<div class="community" id="community">
+				<!-- <p class="community-tit">官<br>媒</p> -->
+				<ul class="community-list">
+					<li class="cl-wechat"><a href="javascript:;"></a></li>
+					<li class="cl-weibo"><a href="http://weibo.com/u/3881287565" target="_blank"></a></li>
+					<li class="cl-forum"><a target="_blank" href="http://bbs.99.com/hbq"></a></li>
+					<li class="cl-tieba"><a rel="nofollow"  target="_blank"></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- /page 03 结果 -->
+	</div>
+</div>
+<!-- /main -->
+<script src="http://hbq.99.com/m/script/zepto.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/preloadImg.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/horse.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+<script type="text/javascript" src="http://hbq.99.com/script/share.js" charset="utf-8"></script>
+</body>
+</html>
