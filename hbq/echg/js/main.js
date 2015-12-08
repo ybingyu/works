@@ -51,7 +51,7 @@ function $(id){
 	return document.getElementById(id);
 }
 
-IMGPATH = 'http://7xnz8p.com1.z0.glb.clouddn.com/echg/image/'; //预加载的图片路径前缀
+IMGPATH = 'http://7xnz8p.com1.z0.glb.clouddn.com/hbq/echg/image/'; //预加载的图片路径前缀
 PRELOADIMGS = [
 	'clock-h.png',
 	'clock-m.png',
