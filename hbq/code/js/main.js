@@ -2,7 +2,7 @@
  * Author: ybingyu
  * Version: 0.1.0
  * Compile Date: 2015-09-16 14:54
-*/ 
+*/
 // 横竖屏检测
 window.addEventListener('onorientationchange' in window ? 'orientationchange' : 'resize', orientationChange, false);
 function orientationChange() {
@@ -41,7 +41,7 @@ document.ontouchstart = function(event){
     event.preventDefault();
 };
 
-IMGPATH = '../image/'; //预加载的图片路径前缀
+IMGPATH = 'http://7xnz8p.com1.z0.glb.clouddn.com/hbq/code/image/'; //预加载的图片路径前缀
 PRELOADIMGS = [
 	[
 		'solider.png',
@@ -68,32 +68,32 @@ hbq.init = function(){
 	this.sound = {};
 	this.sound.ring = new Audio5js({
 		ready: function () {
-        		this.load('../audio/01-ring.mp3');
+        		this.load('http://7xnz8p.com1.z0.glb.clouddn.com/hbq/code/audio/01-ring.mp3');
       	}
     	});
 	this.sound.ride = new Audio5js({
 		ready: function () {
-        		this.load('../audio/02-ride.mp3');
+        		this.load('http://7xnz8p.com1.z0.glb.clouddn.com/hbq/code/audio/02-ride.mp3');
       	}
     	});
 	this.sound.war = new Audio5js({
 		ready: function () {
-        		this.load('../audio/03-war.mp3');
+        		this.load('http://7xnz8p.com1.z0.glb.clouddn.com/hbq/code/audio/03-war.mp3');
       	}
     	});
 	this.sound.hit = new Audio5js({
 		ready: function () {
-        		this.load('../audio/04-hit.mp3');
+        		this.load('http://7xnz8p.com1.z0.glb.clouddn.com/hbq/code/audio/04-hit.mp3');
       	}
     	});
 	this.sound.broke = new Audio5js({
 		ready: function () {
-        		this.load('../audio/05-broke.mp3');
+        		this.load('http://7xnz8p.com1.z0.glb.clouddn.com/hbq/code/audio/05-broke.mp3');
       	}
     	});
 	this.sound.zm = new Audio5js({
 		ready: function () {
-        		this.load('../audio/06-zm.mp3');
+        		this.load('http://7xnz8p.com1.z0.glb.clouddn.com/hbq/code/audio/06-zm.mp3');
       	}
     	});
 };
