@@ -1,0 +1,162 @@
+/*load head*/
+@-webkit-keyframes load-head{
+	100%{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes load-head{
+	100%{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+/*load txt*/
+@-webkit-keyframes load-txt{
+	12%{ -webkit-transform: translate(0,-10px); transform: translate(0,-10px); }
+	13%{ -webkit-transform: none; transform: none; }
+}
+@keyframes load-txt{
+	12%{ -webkit-transform: translate(0,-10px); transform: translate(0,-10px); }
+	13%{ -webkit-transform: none; transform: none; }
+}
+
+/*arrow*/
+@keyframes arrow{
+	0%{opacity: 1;}
+	50%{opacity: 1;}
+	100%{bottom: 50px;opacity: 0;}
+}
+@-webkit-keyframes arrow{
+	0%{opacity: 1;}
+	50%{opacity: 1;}
+	100%{bottom: 50px;opacity: 0;}
+}
+
+/*han*/
+@-webkit-keyframes han{
+	30%{ -webkit-transform: scale(1); transform: scale(1); }
+	100%{-webkit-transform: scale(1);transform: scale(1); }
+}
+@keyframes han{
+	30%{-webkit-transform: scale(1);transform: scale(1); }
+	100%{-webkit-transform: scale(1);transform: scale(1); }
+}
+
+/*foot*/
+@-webkit-keyframes foot {
+	from { background-position: 0 0; }
+	30% { background-position: 0 -390px; }
+	100% { background-position: 0 -390px; }
+}
+@keyframes foot {
+	from { background-position: 0 0; }
+	30% { background-position: 0 -390px; }
+	100% { background-position: 0 -390px; }
+}
+
+/*box*/
+@keyframes box {
+	from { background-position: 0 0; }
+	30% { background-position: 0 -844px; }
+	100% { background-position: 0 -844px; }
+}
+@-webkit-keyframes box {
+	from { background-position: 0 0; }
+	30% { background-position: 0 -844px; }
+	100% { background-position: 0 -844px; }
+}
+/*mao*/
+@keyframes mao {
+	from { background-position: 0 0; }
+	30% { background-position: 0 -315px; }
+	to { background-position: 0 -315px; }
+}
+@-webkit-keyframes mao {
+	from { background-position: 0 0; }
+	30% { background-position: 0 -315px; }
+	to { background-position: 0 -315px; }
+}
+/*eyes*/
+@-webkit-keyframes eyes{
+/*	21%,24%,36%,39%,81%,84%{background: url(../image/eyes-01.png) no-repeat;}
+	22%,23%,37%,38%,82%,83%{background: url(../image/eyes-02.png) no-repeat;}
+	0%,20%,25%,35%,40%,80%,85%{background: none; }*/
+	21%,24%,46%,49%{background: url(http://7xnz8p.com1.z0.glb.clouddn.com/hbq%2Fyuandan%2Fimage%2Feyes-01.png) no-repeat;}
+	22%,23%,47%,48%{background: url(http://7xnz8p.com1.z0.glb.clouddn.com/hbq%2Fyuandan%2Fimage%2Feyes-02.png) no-repeat;}
+	0%,20%,25%,45%,50%{background: none; }
+}
+@keyframes eyes{
+	21%,24%,46%,49%{background: url(http://7xnz8p.com1.z0.glb.clouddn.com/hbq%2Fyuandan%2Fimage%2Feyes-01.png) no-repeat;}
+	22%,23%,47%,48%{background: url(http://7xnz8p.com1.z0.glb.clouddn.com/hbq%2Fyuandan%2Fimage%2Feyes-02.png) no-repeat;}
+	0%,20%,25%,45%,50%{background: none; }
+}
+
+
+/*hand*/
+@-webkit-keyframes hand{
+	100%{-webkit-transform: rotate(3.5deg);transform: rotate(3.5deg);}
+}
+@keyframes hand{
+	100%{-webkit-transform: rotate(3.5deg);transform: rotate(3deg);}
+}
+
+/*xiaba*/
+@-webkit-keyframes xiaba{
+	100%{background-position: 0 -90px; }
+}
+@keyframes xiaba{
+	100%{background-position: 0 -90px; }
+}
+/*meimao*/
+@-webkit-keyframes meimao{
+	100%{background-position: 0 -50px;}
+}
+@keyframes meimao{
+	100%{background-position: 0 -50px;}
+}
+
+/*head*/
+@-webkit-keyframes head{
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 0 -4416px;
+	}
+}
+@keyframes head{
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 0 -4416px;
+	}
+}
+/*gaizi*/
+@-webkit-keyframes gaizi{
+	to {
+		background-position: 0 -682px;
+	}
+}
+@keyframes gaizi{
+	to {
+		background-position: 0 -682px;
+	}
+}
+
+/*gift-btn*/
+@-webkit-keyframes gift-btn{
+	to {
+		opacity: 0.8;
+		background-size: 60% 60%;
+	}
+}
+@keyframes gift-btn{
+	to {
+		opacity: 0.8;
+		background-size: 60% 60%;
+	}
+}
+
+/*disc*/
+@-webkit-keyframes disc{
+	to{-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+}
+@keyframes disc{
+	to{-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+}
