@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>秋季嘉年华</title>
+    <meta name="viewport" content="minimal-ui,target-densitydpi=device-dpi, width=640, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- UC默认竖屏  -->
+    <meta name="browsermode" content="application"/>
+    <!-- QQ强制竖屏  -->
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="x5-page-mode" content="app"/>
+    <meta name="author" content="bindy.Yuan(128080) | 2016-08-08">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="http://news.cos.99.com/script/plugin/swiper/swiper-3.3.1.min.css" rel="stylesheet">
+    <script src="http://news.cos.99.com/m/script/public.js"></script>
+    <!--cdk 可识别il字体-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">-->
+</head>
+<body>
+<div class="hv-tip">
+    <span class="hv-img ab-center"></span>
+</div>
+<div class="load show" id="load">
+    <div class="loader-ani ball-pulse-rise">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <p class="loader-txt">正在加载中...</p>
+    <!--flag 1-->
+    <p class="loader-txt">资源较大，建议在<b>Wifi</b>环境下浏览</p>
+</div>
+
+<div class="main swiper-container" id="main">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide slide-cover">
+            <canvas id="coverCanvas" class="cover-canvas"></canvas>
+        </div>
+        <div class="swiper-slide slide-about">
+            <div class="content">
+                <p class="title"></p>
+                <div class="award"></div>
+                <div class="lb" id="lb">
+                    <!--flag 1-->
+                    <div class="lb-item on">
+                        <p class="lb-title">顶尖赛事</p>
+                        <img src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/cpl/image/lb-img1.jpg" alt="" class="lb-img">
+                        <p class="lb-sm-title">俱乐部明星选手零距离</p>
+                    </div>
+                    <div class="lb-item">
+                        <p class="lb-title">粉丝任务</p>
+                        <img src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/cpl/image/lb-img2.jpg" alt="" class="lb-img">
+                        <p class="lb-sm-title">两日到场即得全英雄</p>
+                    </div>
+                    <div class="lb-item">
+                        <p class="lb-title">人人有礼</p>
+                        <img src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/cpl/image/lb-img3.jpg" alt="" class="lb-img">
+                        <p class="lb-sm-title">到场即得皮肤、英雄卡</p>
+                    </div>
+                    <div class="lb-item">
+                        <p class="lb-title">超炫现场</p>
+                        <img src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/cpl/image/lb-img4.jpg" alt="" class="lb-img">
+                        <p class="lb-sm-title">美女coser超酷互动燃到爆</p>
+                    </div>
+                    <!--flag 2-->
+                    <ul class="page"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide slide-lottery">
+            <div class="content">
+                <p class="title"></p>
+                <!--flag 4-->
+                <div class="round-lottery" id="lottery">
+                    <ul>
+                        <li>
+                            <div>
+                                <div class="inner">
+                                    <img src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/cpl/image/gift-1.png" alt="">
+                                    <span class="txt">嘉年华门票</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="inner">
+                                    <img src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/cpl/image/gift-2.png" alt="">
+                                    <span class="txt">金刚石</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="inner">
+                                    <img src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/cpl/image/gift-3.png" alt="">
+                                    <span class="txt">门票折扣劵</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="inner">
+                                    <img src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/cpl/image/gift-4.png" alt="">
+                                    <span class="txt">神之眼</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="inner">
+                                    <img src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/cpl/image/gift-5.png" alt="">
+                                    <span class="txt">神行石</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="inner">
+                                    <img src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/cpl/image/gift-6.png" alt="">
+                                    <span class="txt">复活石</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="javascript:;" class="btn"></a>
+                </div>
+                <a href="javascript:;" class="gift-btn" id="giftBtn">查看奖品</a>
+                <p class="rest">剩余抽奖次数：<b id="rest">1</b></p>
+                <div class="rule-box swiper-no-swiping">
+                    <ol class="rule">
+                        <li>9月9日-15日每天完成2场纷争或者决战可以各获得一次免费抽奖的机会，有机会抽取CPL门票。</li>
+                        <li>抽中CPL门票，请于掌魂中将其兑换为二维码作为入场凭证。其他物品则直接通过邮件发送到游戏中。
+                        </li>
+                        <li>门票福利：入场即可获得英雄卡与皮肤卡各一张，连续签到2天（掌魂）即可获得30天全英雄体验。</li>
+                        <li>比赛时间：9月24日-9月25日 详细地址：上海市徐汇区老沪闵路166号（近漕宝路地铁站）正大综艺影棚。</li>
+                    </ol>
+                </div>
+            </div>
+            <!--微信访问显示二维码 添加样式show-->
+            <div class="pop pop-ewm">
+                <div class="pop-main">
+                    <img src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/cpl/image/ewm.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide slide-result" id="result">
+            <canvas class="gift-canvas" id="giftBg" width="500" height="400"></canvas>
+            <div class="content">
+                <!--抽中道具-->
+                <div class="prize-cont hide result-other">
+                    <p class="title"></p>
+                    <div class="prize-pic"><img src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/cpl/image/gift-6.png" alt=""></div>
+                    <p class="prize-cont-info">道具已通过游戏内邮件发放，客户端门票售卖同期进行中，<span>9月24-25日</span>上海正大综艺影棚（近漕宝路地铁）期待你的到来</p>
+                    <a href="javascript:;" class="invite-btn">邀请朋友一起来！</a>
+                </div>
+                <!--flag 2-->
+                <!--抽中门票-->
+                <div class="prize-cont result-ticket">
+                    <p class="title">恭喜你抽中价值99元的CPL通票</p>
+                    <div class="prize-pic"><img src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/cpl/image/gift-1.png" alt=""></div>
+                    <p class="prize-cont-info">您的门票兑换CDK为：<span>XXXXX</span>，请尽快兑换成对应的门票二维码，现场更有超炫玩家福利，9月24-25日上海正大综艺影棚不见不散。</p>
+                    <a href="http://mc.cos.99.com/member/cpl4" class="change-btn">门票兑换</a>
+                    <a href="javascript:;" class="invite-btn">邀请朋友一起来！</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="javascript:;" class="next-btn" id="nextBtn"></a>
+</div>
+
+<!--pop 奖品记录-->
+<div class="pop pop-gift" id="giftPop">
+    <div class="pop-main">
+        <p class="title">我的奖品</p>
+        <div class="table table-th">
+            <table>
+                <tr>
+                    <th>名称</th>
+                    <th>中奖时间</th>
+                    <th>CDK</th>
+                </tr>
+            </table>
+        </div>
+        <div class="table table-td">
+            <table>
+                <tr>
+                    <td>门票</td>
+                    <td>8-30 12:00</td>
+                    <td>CDKILIJDA</td>
+                </tr>
+                <tr>
+                    <td>金刚石</td>
+                    <td>8-30 12:00</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>金刚石</td>
+                    <td>08-30 12:00</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!--pop 选择区服-->
+<div class="pop pop-server" id="serverPop">
+    <div class="pop-main">
+        <div class="server-form">
+            <p class="title">选择区服</p>
+            <form action="">
+                <div class="select">
+                    <select name="" id="server">
+                        <option value="" selected>圣域南国</option>
+                        <option value="">南风星域</option>
+                        <option value="">天穹南都</option>
+                        <option value="">北峰疆场</option>
+                        <option value="">烽烟北镜</option>
+                        <option value="">风息林谷</option>
+                        <option value="">誓约之界</option>
+                        <option value="">7K7K</option>
+                    </select>
+                </div>
+                <p class="tips">小贴士：选择区服，奖品将发放到对应区服</p>
+                <input type="submit" class="submit-btn">
+            </form>
+        </div>
+    </div>
+</div>
+<audio src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/cpl/audio/bg.mp3" loop="loop" autoplay="autoplay" preload="auto" id="bg"></audio>
+<script type="text/javascript" src="http://news.cos.99.com/script/zepto.1.1.6.min.js"></script>
+<script type="text/javascript" src="http://news.cos.99.com/script/plugin/swiper/swiper-3.3.1.jquery.min.js"></script>
+<script type="text/javascript" src="http://news.cos.99.com/script/plugin/preloadjs/preloadjs-0.6.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/canvasVideo.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+<!--盒子统计代码-->
+<div style="display:none">
+    <script type="text/javascript">boxPings();</script>
+</div>
+<!--统计代码-->
+<div style="display:none">
+    <script type="text/javascript">pings();</script>
+</div>
+</body>
+</html>
