@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>暑期活动</title>
+<meta name="viewport" content="minimal-ui,target-densitydpi=device-dpi, width=640, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no, email=no" />
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- UC默认竖屏  -->
+<meta name="browsermode" content="application"/>
+<!-- QQ强制竖屏  -->
+<meta name="x5-orientation" content="portrait"/>
+<meta name="x5-page-mode" content="app"/>
+<script src="http://news.cos.99.com/m/script/public.js"></script>
+<link href="http://news.cos.99.com/script/plugin/preloadjs/swiper-3.3.1.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link rel="prefetch" href="css/style_z.png"/>
+<link rel="prefetch" href="image/lottery-front.png"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+</head>
+<body>
+<div class="hv-tip">
+	<span class="hv-img ab-center"></span>
+</div>
+<div class="main swiper-container" id="main">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide swiper-slide-cover" data-type="cover">
+			<a href="javascript:;" class="start-btn" id="startBtn"></a>
+		</div>
+		<div class="swiper-slide swiper-slide-chose" data-type="chose">
+			<div class="content">
+				<p class="tip">提示：再次点击选定按钮可取消选定</p>
+				<ul class="icon-list" id="choseList">
+					<li class="icon-1" data-key="1"></li>
+					<li class="icon-2" data-key="2"></li>
+					<li class="icon-3" data-key="3"></li>
+					<li class="icon-4" data-key="4"></li>
+					<li class="icon-5" data-key="5"></li>
+					<li class="icon-6" data-key="6"></li>
+					<li class="icon-7" data-key="7"></li>
+					<li class="icon-8" data-key="8"></li>
+					<li class="icon-9" data-key="9"></li>
+					<li class="icon-10" data-key="10"></li>
+					<li class="icon-11" data-key="11"></li>
+					<li class="icon-12" data-key="12"></li>
+					<li class="icon-13" data-key="13"></li>
+					<li class="icon-14" data-key="14"></li>
+					<li class="icon-15" data-key="15"></li>
+					<li class="icon-16" data-key="16"></li>
+					<li class="icon-17" data-key="17"></li>
+					<li class="icon-18" data-key="18"></li>
+					<li class="icon-19" data-key="19"></li>
+					<li class="icon-20" data-key="20"></li>
+					<li class="icon-21" data-key="21"></li>
+					<li class="icon-22" data-key="22"></li>
+					<li class="icon-23" data-key="23"></li>
+					<li class="icon-24 ok-btn" id="okBtn"><a href="javascript:;"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="swiper-slide swiper-slide-count" data-type="count">
+			<div class="content">
+				<div class="txt">
+					<div class="wait"></div>
+					<div class="result" id="result"></div>
+				</div>
+				<div class="icon" id="detailBtn">
+					<span class="load"></span>
+					<span class="gou"></span>
+					<span class="loaded"><em></em></span>
+				</div>
+				<div class="dec"></div>
+			</div>
+		</div>
+		<div class="swiper-slide swiper-slide-result" data-type="result">
+			<div class="content">
+				<div class="swiper-container swiper-container-result" id="resultSwiper">
+					<div class="swiper-wrapper">
+						<!--睡觉-->
+						<!--<div class="swiper-slide swiper-slide-1" data-index='1'>-->
+							<!--<div class="txt-front"><canvas width="640" height="469"></canvas></div>-->
+							<!--<p>此处扣去 10小时×45天=<b>450</b>小时</p>-->
+						<!--</div>-->
+                        <!--<div class="swiper-slide swiper-slide-conclusion ">
+                            <div class="content">
+                                <ul class="icon-list" id="choseList">
+                                    <li class="icon-1" data-key="1"></li>
+                                    <li class="icon-2" data-key="2"></li>
+                                    <li class="icon-3" data-key="3"></li>
+                                    <li class="icon-4" data-key="4"></li>
+                                    <li class="icon-5" data-key="5"></li>
+                                </ul>
+                                <p class="title num"><span>1080</span><span>1080</span><span>1080</span><span>1080</span><span>1080</span></p>
+                                <span class="line"></span>
+                                <p class="result-num num">-300</p>
+                            </div>
+                        </div>-->
+					</div>
+                    <div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+        <div class="swiper-slide swiper-slide-end" data-type="end">
+            <div class="content">
+                <div class="logo"><script>setLogoImg();</script></div>
+                <div class="end-result num" id="endResult">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p><span class="txt"></span><span class="rest-day">12</span><span class="rest-day-txt"></span><span class="rest-hour">12</span><span class="rest-hour-txt"></span></p>
+                </div>
+                <div class="btn-box">
+                    <a href="javascript:;" class="share-btn" id="shareBtn"></a>
+                    <a href="javascript:;" class="again-btn"></a>
+                </div>
+            </div>
+        </div>
+		<div class="swiper-slide swiper-slide-lottery" data-type="lottery">
+			<div class="content">
+                <div class="logo"><script>setLogoImg();</script></div>
+				<div class="lottery-box" id="lottery">
+					<div class="lottery-bottom" id="lotteryResult">
+						<!-- use 'show' class -->
+						<!-- 刮开cdk -->
+						<div class="lottery-result get-cdk show">
+							<p><span class="yellow">恭喜你</span>！</p>
+							<p>这手气可以<b class="pink">吹一个暑假</b>了！</p>
+							<p class="cdk">iIlL1oO0</p>
+							<p class="tip gray">注意截图保存CDK 于游戏中兑换</p>
+						</div>
+						<!-- /刮开cdk -->
+						<!-- 没中1 -->
+						<div class="lottery-result sorry-1">
+							<p><span class="yellow">可惜了</span>！</p>
+							<p>策划大大这次真的下了重本！</p>
+							<p>骚年不如我们<b class="pink">再试试</b>！</p>
+						</div>
+						<!-- 没中1 -->
+						<!-- 没中2 -->
+						<div class="lottery-result sorry-2">
+							<p><span class="yellow">对不起</span>！</p>
+							<p>我已经帮你殴打了系统发奖员！</p>
+							<p>骚年不如我们<b class="pink">再试试</b>！</p>
+						</div>
+						<!-- 没中2 -->
+						<!-- 没中3 -->
+						<div class="lottery-result sorry-3">
+							<p><span class="yellow">有毒啊</span>！</p>
+							<p>洗手了？洗脸了？洗完的话——</p>
+							<p>骚年不如我们<b class="pink">再试试</b>！</p>
+						</div>
+						<!-- 没中3 -->
+					</div>
+					<canvas class="lottery-front swiper-no-swiping" id="lotteryCanvas" width="582" height="405"></canvas>
+				</div>
+				<a href="javascript:;" class="again-btn"></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="pop pop-date" id="popDate">
+	<div class="pop-main">
+		<a href="javascript:;" class="close-btn"></a>
+		<select name="month" id="month"></select>
+		<select name="date" id="date"></select>
+	</div>
+</div>
+<div class="share" id="share"></div>
+<audio src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/sumber/audio/bg.mp3" id="bgSound" loop="loop" autoplay="autoplay"></audio>
+<script type="text/javascript" src="http://news.cos.99.com/script/zepto.1.1.6.min.js"></script>
+<script type="text/javascript" src="http://news.cos.99.com/script/plugin/swiper/swiper-3.3.1.jquery.min.js"></script>
+<script type="text/javascript" src="http://news.cos.99.com/script/plugin/preloadjs/preloadjs-0.6.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/countUp.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+<!--盒子统计代码-->
+<div style="display:none">
+	<script type="text/javascript">boxPings();</script>
+</div>
+<!--统计代码-->
+<div style="display:none">
+	<script type="text/javascript">pings();</script>
+</div>
+</body>
+</html>
