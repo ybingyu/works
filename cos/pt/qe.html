@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title></title>
+<meta name="viewport" content="minimal-ui,target-densitydpi=device-dpi, width=640, user-scalable=0,  maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no, email=no" />
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script src="http://news.cos.99.com/m/script/public.js?v1"></script>
+<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- tip -->
+<div class="tip hide" id="originTip"><p class="ab-center">为了更好的体验<br>请将手机/平板竖过来！</p></div>
+<!-- /tip -->
+<!-- main -->
+<div class="swiper-container main-swiper qe-swiper" id="main">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide slide-cover">
+			<div class="content">
+				<a href="javascript:;" class="start-btn" id="startBtn"></a>
+			</div>
+			<div class="chance-end hide" id="chanceEnd">
+				<p>您本日游戏次数已用尽，火拼<b>明日继续！</b></p>
+			</div>
+		</div>
+		<div class="swiper-slide slide-game">
+			<div class="content">
+				<p class="time" id="time"></p>
+				<p class="tips">点按并拖动图片，规定时间内，拼出完整英雄画像</p>
+				<div class="game-main swiper-no-swiping">
+					<ul class="game-rect" id="gameRect"> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li></ul>
+					<!-- result result-success / result-fail -->
+					<div class="result" id="result">
+						<div class="text text-success">
+							<p>拼图成功，获得<b>一次免费翻牌</b>机会</p>
+							<p>点击卡片消耗30积分可继续翻牌</p>
+						</div>
+						<div class="text text-fail">
+							<p>很可惜拼图失败，不过不要紧</p>
+							<p>点击卡片<b>消耗30积分</b>也能翻牌！</p>
+						</div>
+						<ul class="card" id="card">
+							<li><div class="front"><img src="" alt="loading..." class="card-img"><p class="card-name">loading...</p></div><div class="back"></div></li>
+							<li><div class="front"><img src="" alt="loading..." class="card-img"><p class="card-name">loading...</p></div><div class="back"></div></li>
+							<li><div class="front"><img src="" alt="loading..." class="card-img"><p class="card-name">loading...</p></div><div class="back"></div></li>
+							<li><div class="front"><img src="" alt="loading..." class="card-img"><p class="card-name">loading...</p></div><div class="back"></div></li>
+							<li><div class="front"><img src="" alt="loading..." class="card-img"><p class="card-name">loading...</p></div><div class="back"></div></li>
+							<li><div class="front"><img src="" alt="loading..." class="card-img"><p class="card-name">loading...</p></div><div class="back"></div></li>
+						</ul>
+						<p class="chance">每人每天共有25次机会，您还有<span id="chance">9</span>次机会</p>
+						<div class="btns-box">
+							<a href="javascript:;" class="again-btn" id="againBtn"></a>
+							<a href="javascript:;" class="share-btn" id="shareBtn"></a>
+						</div>
+					</div>
+					<!-- /result -->
+					<!-- win effect -->
+					<div class="win-effect"></div>
+					<!-- /win effect -->
+				</div>
+			</div>
+			<div class="card-tips hide" id="cardTips">
+				<div class="inner ab-center">
+					<a href="javascript:;" class="close-btn"></a>
+					<a href="javascript:;" class="card-btn"></a>
+					<p class="tips">本次翻牌将消耗30积分</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /main -->
+<audio loop="loop" autoplay="autoplay" src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/pt/audio/bgm.mp3"></audio>
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper-3.3.1.jquery.min.js"></script>
+<script src="js/main.js"></script>
+
+<!--盒子统计代码-->
+<div style="display:none">
+	<script type="text/javascript">boxPings();</script>
+</div>
+<!--统计代码-->
+<div style="display:none">
+	<script type="text/javascript">pings();</script>
+</div>
+</body>
+</html>
