@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>卧底通缉令</title>
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=1008px,user-scalable=no,maximum-scale=1.0" id="viewport"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="bindy.Yuan(128080) | 2016-08-08">
+    <script src="http://news.cos.99.com/m/script/public.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="main" id="main">
+    <div class="cover-layer loading show cover-load" id="load"><div class="content"><div class="loader">Loading...</div><p class="txt">四位美女嫌疑人正赶来...<br><span class="sm">请<b>关闭</b>手机自动横屏，获得最佳浏览体验</span></p></div></div>
+    <div class="slide slide-cover">
+        <div class="btn-box"><a href="javascript:;" class="start-btn" id="startBtn"></a></div>
+    </div>
+    <div class="slide slide-chose">
+        <ul class="chose-list clearfix" id="choseList">
+            <li>
+                <p class="circular-box"><span class="circular"><i></i><i></i><i></i></span></p>
+                <span class="text">
+                    <b class="name">小妖</b>
+                    <em class="title">可爱萌教主</em>
+                </span>
+            </li>
+            <li>
+                <p class="circular-box"><span class="circular"><i></i><i></i><i></i></span></p>
+                <span class="text">
+                    <b class="name">小珉</b>
+                    <em class="title">治愈系少女</em>
+                </span>
+            </li>
+            <li>
+                <p class="circular-box"><span class="circular"><i></i><i></i><i></i></span></p>
+                <span class="text">
+                    <b class="name">籽芯</b>
+                    <em class="title">清纯俏佳人</em>
+                </span>
+            </li>
+            <li>
+                <p class="circular-box"><span class="circular"><i></i><i></i><i></i></span></p>
+                <span class="text">
+                    <b class="name">莹莹</b>
+                    <em class="title">王者女大神</em>
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div class="slide slide-game slide-game-1">
+        <a href="javascript:;"></a>
+    </div>
+    <div class="slide slide-game slide-game-2">
+        <a href="javascript:;"></a>
+    </div>
+    <div class="slide slide-game slide-game-3">
+        <a href="javascript:;"></a>
+    </div>
+    <div class="slide slide-game slide-game-4">
+        <a href="javascript:;"></a>
+    </div>
+    <div class="slide slide-end" id="endSlide">
+        <div class="txt">
+            <span class="spy-logo"></span>
+            <p>恭喜你，成功识破四位美女妹纸的卧底身份。第二届“谁是卧底”挑战赛将在8月29日——9月7日于英魂电视台、斗鱼TV同步上演，届时4位妹纸将与EHOME、LGD、EP、WE俱乐部的成员同台竞技，互彪演技。谁是新的卧底，等你重新发现。</p>
+            <!-- 按钮灰态 ： disable -->
+            <span id="getBtn" class="btn get-btn"><a href="javascript:;"></a></span>
+            <span class="btn share-btn"><a href="javascript:;"></a></span>
+        </div>
+        <div class="cover-layer coin-layer" id="coinLayer">
+            <div class="content">
+                <!--<span class="coin"></span>-->
+                <!--<p class="coin-txt">xx魂币已经放入你的掌魂账户</p>-->
+                <!--<span class="btn share-btn"><a href="javascript:;"></a></span>-->
+
+                <div class="uid-box">
+                    <!--show tips use class : ‘show’-->
+                    <p class="tips">UID或者昵称不存在</p>
+                    <input type="text" id="uidInput" placeholder="输入你的掌魂UID或者昵称">
+                </div>
+
+                <p class="get-tips">打开《掌上英魂之刃》，点击【我】-右上角设置按钮，在编辑个人<br>信息页面即可查看自己的掌魂UID呦，或者直接输入你的掌魂昵称也可以获得1000掌魂币！</p>
+                <span id="submitBtn" class="btn submit-btn"><input type="submit"></span>
+            </div>
+        </div>
+        <div class="cover-layer coin-layer-get" id="getCoinLayer">
+            <p>成功领取1000魂币!</p>
+        </div>
+    </div>
+    <span id="nextBtn" class="btn next-btn"><a href="javascript:;"></a></span>
+    <canvas id="video" class="canvas"></canvas>
+    <div class="cover-layer loading" id="lvlLoad"><div class="content"><div class="loader">Loading...</div><p class="txt">正在加载关卡...</p></div></div>
+</div>
+<span class="icon wrong-icon" id="wrongIcon"></span>
+<span class="icon right-icon" id="rightIcon"></span>
+<div class="cover-layer share-layer" id="shareTip"></div>
+<script type="text/javascript" src="http://news.cos.99.com/script/zepto.1.1.6.min.js"></script>
+<script type="text/javascript" src="http://news.cos.99.com/script/plugin/preloadjs/preloadjs-0.6.2.min.js"></script>
+<audio src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/undercover/audio/bg.mp3" id="bgSound" loop="loop" autoplay="autoplay"></audio>
+<script src="js/canvasVideo.js"></script>
+<script src="js/main.js"></script>
+<script>
+</script>
+<!--盒子统计代码-->
+<div style="display:none">
+    <script type="text/javascript">boxPings();</script>
+</div>
+</body>
+</html>
