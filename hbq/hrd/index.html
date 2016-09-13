@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>华容道-虎豹骑中文官方网站-hbq.99.com</title>
+<meta name="viewport" content="minimal-ui,target-densitydpi=device-dpi, width=640, user-scalable=0,  maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no, email=no" />
+<meta name="keywords" content="虎豹骑,tiger knight,网络游戏,战争网游,虎豹骑游戏,虎豹骑官网,网络游戏下载,虎豹骑官方网站,中文虎豹骑,免费网络游戏,终生免费,骑砍">
+<meta name="description" content="《虎豹骑》（Tiger Knight）是一款新类型动作竞技战争网游。采用虚幻3引擎（Unreal Engine 3）开发，游戏以三国题材为背景，游戏风格为史诗战争类，支持最多100人对100人的大规模战斗。">
+<script type="text/javascript" src="http://hbq.99.com/m/script/public.js"></script>
+<link href="css/swiper-3.3.1.min.css" rel="stylesheet">
+<link href="css/style.css?" rel="stylesheet"></head>
+<body>
+<!-- load -->
+<div class="load" id="load"><span class="icon ab-center-x"></span></div>
+<!-- /load -->
+<!-- tip -->
+<div class="tip hide" id="originTip"><p class="ab-center">为了更好的体验<br>请将手机/平板竖过来！</p></div>
+<!-- /tip -->
+<div class="swiper-container main-swiper hide" id="main">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide slide-01" id="story01">
+			<div class="content swiper-no-swiping">
+				<div class="story story-01">
+					<div class="man">
+						<div class="speak">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+				</div>
+				<div class="story story-02">
+					<div class="man">
+						<div class="speak">
+							<span></span>
+							<span></span>
+						</div>
+						<span class="han"></span>
+					</div>
+				</div>
+				<div class="story story-03">
+					<div class="man">
+						<div class="speak">
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+				</div>
+				<div class="story story-04">
+					<div class="man man-dongzhuo">
+						<div class="speak">
+							<span></span>
+							<span></span>
+							<span class="end-animation"></span>
+						</div>
+					</div>
+					<div class="man man-xiang"></div>
+				</div>
+			</div>
+		</div>
+		<div class="swiper-slide slide-02" id="story02">
+			<div class="content swiper-no-swiping">
+				<div class="story story-05">
+					<div class="man">
+						<div class="speak">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+				</div>
+				<div class="story story-06">
+					<div class="man">
+						<div class="speak">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<span class="eyes eyes-l"></span>
+						<span class="eyes eyes-r"></span>
+					</div>
+				</div>
+				<div class="story story-07">
+					<div class="speak">
+						<span></span>
+						<span></span>
+					</div>
+					<div class="btn-box start-btn end-animation"><a href="javascript:;" class="" id="startBtn"><span class="hand"></span></a></div>
+					<span class="letme-l"></span>
+					<span class="letme-r"></span>
+				</div>
+			</div>
+		</div>
+		<div class="swiper-slide slide-game" id="gameMain">
+			<div class="content swiper-no-swiping">
+				<p class="level"></p>
+				<p class="step" id="step"></p>
+				<div class="btn-box">
+					<a href="javascript:;" class="reset-btn"></a>
+					<a href="javascript:;" class="next-btn"></a>
+				</div>
+				<div class="game-main" id="gameViewBox">
+					<canvas class="canvas" id="gameView">Sorry，您的设备不支持canvas</canvas>
+				</div>
+				<div class="tips"><span class="hand"></span></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- show: display -->
+<!-- all-pass: all level pass -->
+<div class="pop success" id="result">
+	<div class="tips">
+		<p class="star" id="star"></p>
+		<a href="javascript:;" class="again-btn"></a>
+		<a href="javascript:;" class="look-btn"></a>
+		<a href="javascript:;" class="continue-btn"></a>
+	</div>
+</div>
+<div class="pop share" id="share"></div>
+<div class="pop video" id="video">
+	<div class="video-cont ab-center" id="videoCont"><a href="javascript:;" class="close-btn"></a><video src="audio/bl.mp4" controls="controls" preload="none" webkit-playsinline="true" x-webkit-airplay="true" poster="http://7xnz8p.com1.z0.glb.clouddn.com/hbq/hrd/image/video.jpg" style="display: none;"></video></div>
+</div>
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/swiper-3.3.1.jquery.min.js"></script>
+<script type="text/javascript" src="js/preloadjs-0.6.2.min.js"></script>
+<script type="text/javascript" src="js/easeljs-0.8.2.min.js"></script>
+<script type="text/javascript" src="js/tweenjs-0.6.2.min.js"></script>
+<script type="text/javascript" src="js/soundjs-0.6.2.min.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<!--统计代码-->
+<div style="display:none">
+	<script type="text/javascript">pings();</script>
+</div>
+</body>
+</html>
