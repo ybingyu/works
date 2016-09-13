@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>一言不合就放Q</title>
+<meta name="viewport" content="minimal-ui,target-densitydpi=device-dpi, width=640, user-scalable=0,  maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no, email=no" />
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- UC默认竖屏 ，UC强制全屏 -->
+<meta name="full-screen" content="yes"/>
+<meta name="browsermode" content="application"/>
+<!-- QQ强制竖屏 QQ强制全屏 -->
+<meta name="x5-orientation" content="portrait"/>
+<meta name="x5-fullscreen" content="true"/>
+<meta name="x5-page-mode" content="app"/>
+<script src="http://news.cos.99.com/m/script/public.js"></script>
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="hv-tip">
+	<span class="hv-img ab-center"></span>
+</div>
+<div class="loading" id="load">
+	<div class="loader-inner ball-beat ab-center"> <div></div> <div></div> <div></div> </div>
+	<p class="loading-txt ab-center">当前加载进度为 0%</p>
+</div>
+<!-- 加debug class 动画会chua chua chua的加速呀~ -->
+<div class="main hide" id="main">
+	<div class="slide slide-cover">
+		<div class="content">
+			<div class="transparent title"><i class="transparent jiu"></i><i class="transparent fang"></i></div>
+			<div class="qt-box">
+				<span class="transparent bz"></span>
+				<span class="transparent qt"><i class="transparent qt-hua"></i></span>
+				<span class="transparent yw l"></span>
+				<span class="transparent yw r"></span>
+				<i class="transparent word q"></i>
+				<i class="transparent word r"></i>
+				<i class="transparent word e"></i>
+				<i class="transparent word w"></i>
+			</div>
+			<a href="javascript:;" class="transparent start-btn" id="startBtn"></a>
+		</div>
+	</div>
+	<div class="slide slide-question q-1">
+		<div class="content">
+			<p class="question-num"><i class="di"></i><i class="num"></i><i class="ti"></i></p>
+			<div class="transparent tv-box">
+				<div class="bg">
+					<span class="bz"></span>
+					<span class="yw l"></span>
+					<span class="yw r"></span>
+				</div>
+				<div class="tv">
+					<div class="question-video"></div>
+					<div class="cover count show"><i></i></div>
+					<div class="cover question-word"><img data-src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/lz/image/q-1.png" width="453" height="296"></div>
+					<div class="cover result result-wrong">
+						<i class="icon"></i>
+						<img data-src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/lz/image/wrong-1.png" width="453" height="159">
+					</div>
+					<div class="cover result result-right">
+						<i class="icon"></i>
+						<img data-src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/lz/image/right-1.png" width="453" height="159">
+					</div>
+				</div>
+			</div>
+			<div class="transparent answer gray">
+				<a href="javascript:;" class="q"></a>
+				<a href="javascript:;" class="w"></a>
+				<a href="javascript:;" class="e"></a>
+				<a href="javascript:;" class="r"></a>
+			</div>
+		</div>
+	</div>
+	<div class="slide slide-question q-2">
+		<div class="content">
+			<p class="question-num"><i class="di"></i><i class="num"></i><i class="ti"></i></p>
+			<div class="transparent tv-box">
+				<div class="bg">
+					<span class="bz"></span>
+					<span class="yw l"></span>
+					<span class="yw r"></span>
+				</div>
+				<div class="tv">
+					<div class="question-video"></div>
+					<div class="cover count show"><i></i></div>
+					<div class="cover question-word"><img data-src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/lz/image/q-2.png" width="453" height="296"></div>
+					<div class="cover result result-wrong">
+						<i class="icon"></i>
+						<img data-src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/lz/image/wrong-2.png" width="453" height="159">
+					</div>
+					<div class="cover result result-right">
+						<i class="icon"></i>
+						<img data-src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/lz/image/right-2.png" width="453" height="159">
+					</div>
+				</div>
+			</div>
+			<div class="transparent answer gray">
+				<a href="javascript:;" class="q"></a>
+				<a href="javascript:;" class="w"></a>
+				<a href="javascript:;" class="e"></a>
+				<a href="javascript:;" class="r"></a>
+			</div>
+		</div>
+	</div>
+	<div class="slide slide-question q-3">
+		<div class="content">
+			<p class="question-num"><i class="di"></i><i class="num"></i><i class="ti"></i></p>
+			<div class="transparent tv-box">
+				<div class="bg">
+					<span class="bz"></span>
+					<span class="yw l"></span>
+					<span class="yw r"></span>
+				</div>
+				<div class="tv">
+					<div class="question-video"></div>
+					<div class="cover count show"><i></i></div>
+					<div class="cover question-word"><img data-src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/lz/image/q-3.png" width="453" height="296"></div>
+					<div class="cover result result-wrong">
+						<i class="icon"></i>
+						<img data-src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/lz/image/wrong-3.png" width="453" height="159">
+					</div>
+					<div class="cover result result-right">
+						<i class="icon"></i>
+						<img data-src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/lz/image/right-3.png" width="453" height="159">
+					</div>
+				</div>
+			</div>
+			<div class="transparent answer gray">
+				<a href="javascript:;" class="q"></a>
+				<a href="javascript:;" class="w"></a>
+				<a href="javascript:;" class="e"></a>
+				<a href="javascript:;" class="r"></a>
+			</div>
+		</div>
+	</div>
+	<div class="slide slide-question q-4">
+		<div class="content">
+			<p class="question-num"><i class="di"></i><i class="num"></i><i class="ti"></i></p>
+			<div class="transparent tv-box">
+				<div class="bg">
+					<span class="bz"></span>
+					<span class="yw l"></span>
+					<span class="yw r"></span>
+				</div>
+				<div class="tv">
+					<div class="question-video"></div>
+					<div class="cover count show"><i></i></div>
+					<div class="cover question-word"><div class="inner"><img src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/lz/image/q-4.png" width="433" height="488"></div></div>
+					<div class="cover result result-wrong">
+						<i class="icon"></i>
+						<div class="txt"></div>
+					</div>
+					<div class="cover result result-right">
+						<i class="icon"></i>
+						<div class="txt"></div>
+					</div>
+				</div>
+			</div>
+			<div class="transparent answer gray">
+				<a href="javascript:;" class="q"></a>
+				<a href="javascript:;" class="w"></a>
+				<a href="javascript:;" class="e"></a>
+				<a href="javascript:;" class="r"></a>
+			</div>
+		</div>
+	</div>
+	<div class="slide slide-end">
+		<div class="content">
+			<div class="transparent logo"></div>
+			<div class="transparent tv-box">
+				<div class="bg">
+					<span class="bz"></span>
+					<span class="yw l"></span>
+					<span class="yw r"></span>
+				</div>
+				<div class="tv">
+					<div class="question-video"></div>
+				</div>
+			</div>
+			<div class="transparent btn-box">
+				<div class="box">
+					<a href="javascript:;" class="again-btn" id="againBtn"></a>
+					<a href="javascript:;" class="share-btn" id="shareBtn"></a>
+				</div>
+				<a href="javascript:;" class="more-btn" id="moreBtn"></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="music" class="music stopped">
+	<div class="control">
+		<div class="control-after"></div>
+	</div>
+</div>
+<div class="cover-layer ewm" id="ewmLayer">
+	<div class="content">
+		<div class="txt"></div>
+		<img src="http://7xnz8p.com1.z0.glb.clouddn.com/cos/lz/image/ewm.jpg" width="470" height="470">
+	</div>
+</div>
+<div class="cover-layer ewm box" id="ewmBoxLayer"></div>
+<div class="cover-layer share-layer" id="shareLayer"></div>
+<script type="text/javascript" src="http://news.cos.99.com/script/zepto.1.1.6.min.js"></script>
+<script type="text/javascript" src="js/preloadjs-0.6.2.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<!--盒子统计代码-->
+<div style="display:none">
+	<script type="text/javascript">boxPings();</script>
+</div>
+<!--统计代码-->
+<div style="display:none">
+	<script type="text/javascript">pings();</script>
+</div>
+</body>
+</html>
