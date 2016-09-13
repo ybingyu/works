@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title></title>
+<meta name="viewport" content="minimal-ui,target-densitydpi=device-dpi, width=640, user-scalable=0,  maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- UC默认竖屏 ，UC强制全屏 -->
+<meta name="full-screen" content="yes"/>
+<meta name="browsermode" content="application"/>
+<!-- QQ强制竖屏 QQ强制全屏 -->
+<meta name="x5-orientation" content="portrait"/>
+<meta name="x5-fullscreen" content="true"/>
+<meta name="x5-page-mode" content="app"/>
+<script src="http://news.cos.99.com/m/script/public.js"></script>
+<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- tip -->
+<div class="tip hide" id="originTip"><p class="ab-center">为了更好的体验<br>请将手机/平板竖过来！</p></div>
+<!-- /tip -->
+<!-- main -->
+<div class="swiper-container main-swiper" id="main">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide slide-cover">
+			<div class="content">
+				<h1 class="logo">英魂之刃 荣誉出品</h1>
+				<a href="javascript:;" class="btn start-btn" id="startBtn"></a>
+				<p class="btn-txt left">点击挑战<span>>>>>>>>>>>></span></p>
+				<p class="btn-txt right"><span><<<<<<<<<<<</span>点击挑战</p>
+			</div>
+		</div>
+		<!-- fail -->
+		<div class="swiper-slide slide-game" id="gameSlide">
+			<div class="content">
+				<p class="level" id="level"><i class="num-0"></i><i class="num-0"></i></p>
+				<div class="gu-box" id="gu">
+					<a href="javascript:;" class="gu left" data-s="left"><span class="gu-img"></span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></a>
+					<a href="javascript:;" class="gu right" data-s="right"><span class="gu-img"></span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></a>
+				</div>
+			</div>
+			<!-- show -->
+			<div class="pop pop-rule show" id="rule">
+				<div class="main ab-center">
+					<a href="javascript:;" class="close-btn"></a>
+					<p class="">当鼓摇动时注意倾听鼓声</p>
+					<p>判断鼓声来自左耳还是右耳</p>
+					<p>在鼓摇动画结束前</p>
+					<p>点击左鼓或右鼓进行选择</p>
+				</div>
+			</div>
+		</div>
+		<div class="swiper-slide slide-result">
+			<div class="content">
+				<p class="logo"></p>
+				<a href="javascript:;" class="btn again-btn" id="againBtn"></a>
+				<a href="javascript:;" class="btn share-btn" id="shareBtn"></a>
+				<p class="congratulation"><span class="red">鼓膜惊奇</span>的<span class="user">爪瓜爪瓜爪</span>成功闯过</p>
+				<p class="result" id="result"></p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /main -->
+<!-- wechat layer -->
+<div class="tip-layer wechat"></div>
+<!-- 掌魂 layer -->
+<div class="tip-layer update"><p>请将掌魂更新到最新版本</p></div>
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper-3.3.1.jquery.min.js"></script>
+<script src="js/howler.min.js"></script>
+<script src="js/main.js"></script>
+<!--盒子统计代码-->
+<div style="display:none">
+	<script type="text/javascript">boxPings();</script>
+</div>
+<!--统计代码-->
+<div style="display:none">
+	<script type="text/javascript">pings();</script>
+</div>
+</body>
+</html>
